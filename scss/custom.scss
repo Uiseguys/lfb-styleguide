@@ -1,0 +1,19 @@
+$red: #b70017;
+$yellow: #ffcd00;
+$green: #286d4a;
+$white: #fffde9;
+$gray-100: #e8e8e8;
+$gray-200: #bababa;
+$gray-300: #6d6d6d;
+$gray-400: #3f3f3f;
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "style.scss";
