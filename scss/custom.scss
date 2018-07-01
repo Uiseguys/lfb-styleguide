@@ -1,11 +1,22 @@
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$orange: #fd7e14;
+$teal: #20c997;
+$cyan: #17a2b8;
 $red: #b70017;
 $yellow: #ffcd00;
 $green: #286d4a;
 $white: #fffde9;
+$gold: #c29900;
 $gray-100: #e8e8e8;
 $gray-200: #bababa;
 $gray-300: #6d6d6d;
 $gray-400: #3f3f3f;
+$gray-600: #868e96;
+$gray-800: #343a40;
+$colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gold: $gold, gray: $gray-600,gray-dark: $gray-800);
 
 $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
@@ -14,6 +25,15 @@ $btn-border-radius-lg: 0;
 $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 1024px, xl: 1280px);
+$grid-gutter-width: 20px;
+
+$font-family-base: "Gudea Regular", Helvetica, Arial;
+$headings-font-family: "Garamond Regular", Helvetica, Arial;
+$h1-font-size: 40px;
+$h2-font-size: 28px;
+$h3-font-size: 20px;
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "style.scss";
