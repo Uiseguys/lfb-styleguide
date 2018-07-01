@@ -6343,7 +6343,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn-sm, .btn-group-sm > .btn {
   height: 28px !important;
-  font-size: 13px; }
+  font-size: 13px !important; }
 
 .btn {
   text-transform: uppercase;
