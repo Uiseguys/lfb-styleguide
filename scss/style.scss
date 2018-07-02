@@ -3,6 +3,14 @@
     src: url('../fonts/Gudea-Bold.otf') format("opentype");
 }
 
+.bg-primary {
+  background-color: $white !important;
+}
+
+.bg-secondary {
+  background-color: $yellow !important;
+}
+
 .btn-primary {
   @extend .btn-danger;
 }
