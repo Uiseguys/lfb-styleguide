@@ -3,6 +3,24 @@
     src: url('../fonts/Gudea-Bold.otf') format("opentype");
 }
 
+@font-face {
+    font-family: "Gudea Regular";
+    src: url('../fonts/Gudea-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Garamond Regular";
+    src: url('../fonts/Garamond-Regular.ttf') format("opentype");
+}
+
+body {
+  font-family: "Gudea Regular", Helvetica, Arial;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Garamond Regular", Helvetica, Arial;
+}
+
 .bg-primary {
   background-color: $white !important;
 }
