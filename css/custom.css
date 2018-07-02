@@ -68,7 +68,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Gudea Regular", Helvetica, Arial;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -312,7 +312,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Garamond Regular", Helvetica, Arial;
+  font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
@@ -3857,7 +3857,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Gudea Regular", Helvetica, Arial;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3942,7 +3942,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Gudea Regular", Helvetica, Arial;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6304,6 +6304,21 @@ a.text-dark:hover, a.text-dark:focus {
 @font-face {
   font-family: "Gudea Bold";
   src: url("../fonts/Gudea-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Gudea Regular";
+  src: url("../fonts/Gudea-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Garamond Regular";
+  src: url("../fonts/Garamond-Regular.ttf") format("opentype"); }
+
+body {
+  font-family: "Gudea Regular", Helvetica, Arial; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Garamond Regular", Helvetica, Arial; }
 
 .bg-primary {
   background-color: #fffde9 !important; }
