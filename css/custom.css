@@ -6314,7 +6314,11 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../fonts/Garamond-Regular.ttf") format("opentype"); }
 
 body {
-  font-family: "Gudea Regular", Helvetica, Arial; }
+  font-family: "Gudea Regular", Helvetica, Arial;
+  background-color: #fff; }
+
+select.form-control, textarea.form-control {
+  height: auto; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -6410,3 +6414,6 @@ h1, h2, h3, h4, h5, h6,
 .dropdown-toggle:hover, .dropdown-toggle:focus {
   background-color: #fffde9 !important;
   color: #3f3f3f !important; }
+
+.input-group-prepend {
+  height: 35px; }

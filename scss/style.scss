@@ -15,6 +15,11 @@
 
 body {
   font-family: "Gudea Regular", Helvetica, Arial;
+  background-color: #fff;
+}
+
+select.form-control, textarea.form-control {
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -122,4 +127,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .dropdown-toggle:hover, .dropdown-toggle:focus {
   background-color: $white !important;
   color: $gray-400 !important;
+}
+
+.input-group-prepend {
+  height: 35px;
 }
