@@ -6417,3 +6417,6 @@ h1, h2, h3, h4, h5, h6,
 
 .input-group-prepend {
   height: 35px; }
+
+.custom-select {
+  -webkit-appearance: none; }
