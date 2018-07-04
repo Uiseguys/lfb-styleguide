@@ -6408,12 +6408,15 @@ h1, h2, h3, h4, h5, h6,
   height: 50px !important;
   font-size: 20px !important; }
 
+.form-control:focus {
+  background-color: #fff; }
+
 .dropdown-toggle {
   font-family: Arial !important;
   text-transform: none; }
 
 .dropdown-toggle:hover, .dropdown-toggle:focus {
-  background-color: #fffde9 !important;
+  background-color: #fff !important;
   color: #3f3f3f !important; }
 
 .input-group-prepend {
