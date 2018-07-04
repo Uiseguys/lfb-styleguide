@@ -6392,12 +6392,13 @@ h1, h2, h3, h4, h5, h6,
   font-size: 13px !important; }
 
 .form-control {
+  background-color: #fff;
   height: 35px;
   font-size: 16px; }
 
 .form-control:disabled {
   border-color: #d2d2d2;
-  background-color: #fffde9; }
+  background-color: #fff; }
 
 .form-control-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-prepend > .input-group-text,
@@ -6419,4 +6420,5 @@ h1, h2, h3, h4, h5, h6,
   height: 35px; }
 
 .custom-select {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  background-color: #fff; }
