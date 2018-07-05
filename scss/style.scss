@@ -15,7 +15,6 @@
 
 body {
   font-family: "Gudea Regular", Helvetica, Arial;
-  background-color: #fff;
 }
 
 select.form-control, textarea.form-control {
@@ -27,7 +26,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .bg-primary {
-  background-color: $white !important;
+  background-color: #fffde9 !important;
 }
 
 .bg-secondary {
@@ -100,14 +99,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .form-control {
-  background-color: #fff;
   height: 35px;
   font-size: 16px;
 }
 
 .form-control:disabled {
   border-color: #d2d2d2;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .form-control-lg {
@@ -117,7 +115,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .form-control:focus {
   @extend .btn-primary:focus;
-  background-color: #fff;
 }
 
 .dropdown-toggle {
@@ -127,7 +124,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .dropdown-toggle:hover, .dropdown-toggle:focus {
-  background-color: #fff !important;
+  background-color: $white !important;
   color: $gray-400 !important;
 }
 
@@ -137,5 +134,4 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .custom-select {
   -webkit-appearance: none;
-  background-color: #fff;
 }
