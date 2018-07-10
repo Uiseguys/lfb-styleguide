@@ -6425,14 +6425,3 @@ label {
 
 .custom-select {
   -webkit-appearance: none; }
-
-.form-check {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background: white;
-  border-radius: 0;
-  border: 1px solid #6d6d6d; }
-
-.form-check:checked {
-  background-color: #3f3f3f; }
