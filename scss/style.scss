@@ -25,6 +25,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Garamond Regular", Helvetica, Arial;
 }
 
+label {
+  font-size: 12px;
+  font-weight: bold;
+  color: $gray-300;
+}
+
 .bg-primary {
   background-color: #fffde9 !important;
 }
@@ -121,6 +127,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   @extend .btn-outline-secondary;
   font-family: Arial !important;
   text-transform: none;
+  width: 100%;
 }
 
 .dropdown-toggle:hover, .dropdown-toggle:focus {
@@ -135,3 +142,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .custom-select {
   -webkit-appearance: none;
 }
+
+// .form-check {
+//   -webkit-appearance:none;
+//   width: 20px;
+//   height: 20px;
+//   background: white;
+//   border-radius: 0;
+//   border:1px solid $gray-300;
+// }
+//
+// .form-check:checked {
+//   background-color: $gray-400;
+// }

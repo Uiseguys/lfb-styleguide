@@ -6323,6 +6323,11 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Garamond Regular", Helvetica, Arial; }
 
+label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #6d6d6d; }
+
 .bg-primary {
   background-color: #fffde9 !important; }
 
@@ -6408,7 +6413,8 @@ h1, h2, h3, h4, h5, h6,
 
 .dropdown-toggle {
   font-family: Arial !important;
-  text-transform: none; }
+  text-transform: none;
+  width: 100%; }
 
 .dropdown-toggle:hover, .dropdown-toggle:focus {
   background-color: #fff !important;
