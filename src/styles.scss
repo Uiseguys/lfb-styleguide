@@ -1,1 +1,161 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: "Gudea Bold";
+    src: url('./assets/fonts/Gudea-Bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Gudea Regular";
+    src: url('./assets/fonts/Gudea-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Garamond Regular";
+    src: url('./assets/fonts/Garamond-Regular.ttf') format("opentype");
+}
+
+body {
+  font-family: "Gudea Regular", Helvetica, Arial;
+}
+
+select.form-control, textarea.form-control {
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Garamond Regular", Helvetica, Arial;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  color: $gray-300;
+}
+
+.bg-primary {
+  background-color: #fffde9 !important;
+}
+
+.bg-secondary {
+  background-color: $yellow !important;
+}
+
+.btn-primary {
+  @extend .btn-danger;
+}
+.btn-primary:focus, .dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
+}
+
+.swatch-100 {
+  background-color: $gray-100;
+}
+.swatch-200 {
+  background-color: $gray-200;
+}
+.swatch-300 {
+  background-color: $gray-300;
+  color: $white;
+}
+.swatch-400 {
+  background-color: $gray-400;
+  color: $white;
+}
+.swatch-500 {
+  background-color: $gray-500;
+}
+.swatch-600 {
+  background-color: $gray-600;
+  color: $white;
+}
+.swatch-700 {
+  background-color: $gray-700;
+  color: $white;
+}
+.swatch-800 {
+  background-color: $gray-800;
+  color: $white;
+}
+.swatch-900 {
+  background-color: $gray-900;
+  color: $white;
+}
+
+.btn-sm {
+  height: 28px !important;
+  font-size: 13px !important;
+}
+.btn {
+  text-transform: uppercase;
+  height: 35px;
+  font-family: "Gudea Bold", Helvetica, Arial;
+  font-size: 16px;
+}
+.btn-lg {
+  height: 50px !important;
+}
+
+.btn.disabled, .btn[disabled] {
+  background-color: #d2d2d2;
+  border-color: #d2d2d2;
+}
+
+.form-control-sm {
+  height: 28px !important;
+  font-size: 13px !important;
+}
+
+.form-control {
+  height: 35px;
+  font-size: 16px;
+}
+
+.form-control:disabled {
+  border-color: #d2d2d2;
+  background-color: $white;
+}
+
+.form-control-lg {
+  height: 50px !important;
+  font-size: 20px !important;
+}
+
+.form-control:focus {
+  @extend .btn-primary:focus;
+}
+
+.dropdown-toggle {
+  @extend .btn-outline-secondary;
+  font-family: Arial !important;
+  text-transform: none;
+  width: 100%;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+  background-color: $white !important;
+  color: $gray-400 !important;
+}
+
+.input-group-prepend {
+  height: 35px;
+}
+
+.custom-select {
+  -webkit-appearance: none;
+}
+
+// .form-check {
+//   -webkit-appearance:none;
+//   width: 20px;
+//   height: 20px;
+//   background: white;
+//   border-radius: 0;
+//   border:1px solid $gray-300;
+// }
+//
+// .form-check:checked {
+//   background-color: $gray-400;
+// }
