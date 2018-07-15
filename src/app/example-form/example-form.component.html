@@ -1,4 +1,3 @@
-<!-- <cwc-styles></cwc-styles> -->
 <div class="container-fluid">
   <div class="container">
     <div class="row pt-5 pb-5">
@@ -27,54 +26,60 @@
     </div>
     <form>
       <div class="form-group">
-        <label for="">Bearbeitende Person(en)</label>
-        <input class="form-control" type="text" name="input1" value="">
-        <cwc-typeahead googleAutocomplete="true" placeholder="Search for a location e.g 'Berlin'"></cwc-typeahead>
-        <cwc-tag class="mx-1" text='Stencil' link='https://stenciljs.com/' closable="true" rounded="true" imgLink='https://stenciljs.com/assets/img/logo.png'></cwc-tag>
+        <label class="control-label" for="input1">Bearbeitende Person(en)</label>
+        <input class="form-control" id="input1" type="text" name="input1" value="">
+        <br />
+        <cwc-tag class="mx-1" text='Herr Muller' closable="true"></cwc-tag>
+        <cwc-tag class="mx-1" text='Frau Forster' closable="true"></cwc-tag>
+        <!-- <cwc-typeahead googleAutocomplete="true" placeholder="Search for a location e.g 'Berlin'"></cwc-typeahead> -->
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="">Veranstaitungstitel</label>
-            <input class="form-control" type="text" name="" value="">
+            <label class="control-label" for="input2">Veranstaitungstitel</label>
+            <input class="form-control" id="input2" type="text" name="" value="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="">Veranstaitungsnummer</label>
-            <input readonly class="form-control-plaintext" type="text" name="" value="88733943">
+            <label class="control-label" for="input3">Veranstaitungsnummer</label>
+            <input readonly id="input3" class="form-control-plaintext" type="text" name="" value="88733943">
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="">Veranstaltungstyp</label>
-            <input class="form-control" type="text" name="" value="">
+            <label class="control-label" for="input4">Veranstaltungstyp</label>
+            <input id="input4" class="form-control" type="text" name="" value="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="">Eigenschaften im Online-Portal</label>
+            <label class="control-label">Eigenschaften im Online-Portal</label>
               <div class="row mt-2 mb-2">
-                <div class="col-md-6">
-                  <input class="form-check form-check-inline" type="checkbox" name="" value="">
-                  Sichtbar
+                <div class="checkbox col-md-6">
+                  <label>
+                    <input class="form-check form-check-inline" type="checkbox" name="" value="">
+                    Sichtbar
+                  </label>
                 </div>
-                <div class="col-md-6">
-                  <input class="form-check form-check-inline" type="checkbox" name="" value="">
-                  Buchbar
+                <div class="checkbox col-md-6">
+                  <label>
+                    <input class="form-check form-check-inline" type="checkbox" name="" value="">
+                    Buchbar
+                  </label>
                 </div>
               </div>
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="">Inhalt</label>
+        <label class="control-label" for="">Inhalt</label>
         <textarea class="form-control" rows="4"></textarea>
       </div>
       <div class="form-group">
-        <label for="">Ziel der Veranstaltung</label>
+        <label class="control-label" for="">Ziel der Veranstaltung</label>
         <textarea class="form-control" rows="4"></textarea>
       </div>
     </form>
@@ -86,79 +91,88 @@
     <form>
       <div class="row mb-3">
         <div class="col-md-6">
-          <label for="">Hauptbereich</label>
-          <cwc-dropdown>
-            <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
-            type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            QB | Qualitatsbereich Unterricht
-            </button>
-
-            <div slot="dropdown-menu" class="dropdown-menu">
+          <div class="form-group">
+            <label class="control-label" for="dropdown1">Hauptbereich</label>
+            <cwc-dropdown id="dropdown1">
+              <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
+              type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              QB | Qualitatsbereich Unterricht
+              </button>
+              <div slot="dropdown-menu" class="dropdown-menu">
               <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
               <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-            </div>
-          </cwc-dropdown>
+              </div>
+            </cwc-dropdown>
+          </div>
         </div>
         <div class="col-md-6">
-          <label for="">Bereich</label>
-          <cwc-dropdown>
-            <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
-            type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            QB | Qualitatsbereich Unterricht
-            </button>
-            <div slot="dropdown-menu" class="dropdown-menu">
-            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-            </div>
-          </cwc-dropdown>
-        </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="">Hauptbereich</label>
-          <cwc-dropdown>
-            <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
-            type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            QB | Qualitatsbereich Unterricht
-            </button>
-            <div slot="dropdown-menu" class="dropdown-menu">
-            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-            </div>
-          </cwc-dropdown>
-        </div>
-        <div class="col-md-6">
-          <label for="">Bereich</label>
-          <cwc-dropdown>
-            <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
-            type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            Sprachlich-literarischer Bereich
-            </button>
-            <div slot="dropdown-menu" class="dropdown-menu">
-            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-            </div>
-          </cwc-dropdown>
+          <div class="form-group">
+            <label class="control-label" for="dropdown2">Bereich</label>
+            <cwc-dropdown id="dropdown2">
+              <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
+              type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              Sprachlich-literarischer Bereich
+              </button>
+              <div slot="dropdown-menu" class="dropdown-menu">
+              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+              </div>
+            </cwc-dropdown>
+          </div>
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-md-6">
-          <label for="">Hauptbereich</label>
-          <cwc-dropdown>
-            <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
-            type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            QB | Qualitatsbereich Unterricht
-            </button>
-            <div slot="dropdown-menu" class="dropdown-menu">
-            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-            </div>
-          </cwc-dropdown>
+          <div class="form-group">
+            <label class="control-label" for="dropdown3">Teilbereich</label>
+            <cwc-dropdown id="dropdown3">
+              <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
+              type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              Bilingualer Unterricht
+              </button>
+              <div slot="dropdown-menu" class="dropdown-menu">
+              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+              </div>
+            </cwc-dropdown>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="dropdown4">Unterbereich</label>
+            <cwc-dropdown id="dropdown4">
+              <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
+              type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              Keiner
+              </button>
+              <div slot="dropdown-menu" class="dropdown-menu">
+              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+              </div>
+            </cwc-dropdown>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="dropdown5">Themenschwerpunkt</label>
+            <cwc-dropdown id="dropdown5">
+              <button slot="dropdown-trigger" class="btn btn-secondary dropdown-toggle text-left"
+              type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              IF | Individuelle Fortbildung
+              </button>
+              <div slot="dropdown-menu" class="dropdown-menu">
+              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+              </div>
+            </cwc-dropdown>
+          </div>
         </div>
         <div class="col-md-6">
         </div>
