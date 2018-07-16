@@ -139,6 +139,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   width: 100%;
 }
 
+.dropdown-toggle::after {
+  position: absolute;
+  right: 10px;
+  top: 1rem;
+}
+
 .dropdown-menu {
   width: 100%;
 }
