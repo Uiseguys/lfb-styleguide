@@ -22,11 +22,11 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@ui-guys/stencil-bs-ui-lib": "latest",
     "core-js": "^2.4.1",
     "express": "^4.16.3",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19",
-    "@ui-guys/stencil-bs-ui-lib": "latest"
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.3",

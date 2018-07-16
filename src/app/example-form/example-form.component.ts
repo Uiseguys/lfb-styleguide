@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampleFormComponent implements OnInit {
 
+  multiSelectData: any = ['Alex', 'Alabama', 'Alaska', 'andreas', 'alexandro'];
+
   constructor() { }
 
   ngOnInit() {
