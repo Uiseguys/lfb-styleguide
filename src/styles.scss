@@ -39,8 +39,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   background-color: #fffde9 !important;
 }
 
-.bg-secondary, .badge-primary, .badge-secondary {
+.bg-secondary, .badge-primary, .badge-secondary, .btn-toolbar {
   background-color: $yellow !important;
+}
+
+.btn-toolbar {
+  justify-content: center;
 }
 
 .badge {
