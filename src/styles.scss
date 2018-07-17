@@ -39,12 +39,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   background-color: #fffde9 !important;
 }
 
-.bg-secondary, .badge-primary, .badge-secondary, .btn-toolbar {
+.bg-secondary, .badge-primary, .badge-secondary {
   background-color: $yellow !important;
-}
-
-.btn-toolbar {
-  justify-content: center;
 }
 
 .badge {
@@ -165,6 +161,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   -webkit-appearance: none;
 }
 
+.btn-outline-secondary {
+  background-color: $white;
+}
+
+.btn-outline-secondary[disabled], .btn-outline-secondary.disabled {
+  background-color: $gray-100;
+  border-color: $gray-600;
+}
 // .form-check {
 //   -webkit-appearance:none;
 //   width: 20px;
