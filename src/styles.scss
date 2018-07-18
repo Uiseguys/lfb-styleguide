@@ -53,7 +53,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn-primary {
   @extend .btn-danger;
 }
-.btn-primary:focus, .dropdown-toggle:focus {
+
+.btn-primary:focus, .btn-outline-secondary:focus {
   box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
 }
 
@@ -131,11 +132,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   @extend .btn-primary:focus;
 }
 
-.dropdown-toggle {
-  @extend .btn-outline-secondary;
+.btn-outline-secondary {
   font-family: Arial !important;
   text-transform: none;
   width: 100%;
+}
+
+.dropdown-toggle-split {
+  width: auto;
+}
+
+.dropdown-toggle-split::after {
+  position: static !important;
 }
 
 .dropdown-toggle::after {
@@ -148,7 +156,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   width: 100%;
 }
 
-.dropdown-toggle:hover, .dropdown-toggle:focus {
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
   background-color: $white !important;
   color: $gray-400 !important;
 }
