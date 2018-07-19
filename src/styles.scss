@@ -1,20 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-@import 'variables';
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'assets/styles/bootstrap/variables';
+@import '~bootstrap-scss/bootstrap';
 
 @font-face {
-    font-family: "Gudea Bold";
-    src: url('./assets/fonts/Gudea-Bold.otf') format("opentype");
+  font-family: "Gudea Bold";
+  src: url('./assets/fonts/Gudea-Bold.otf') format("opentype");
 }
 
 @font-face {
-    font-family: "Gudea Regular";
-    src: url('./assets/fonts/Gudea-Regular.otf') format("opentype");
+  font-family: "Gudea Regular";
+  src: url('./assets/fonts/Gudea-Regular.otf') format("opentype");
 }
 
 @font-face {
-    font-family: "Garamond Regular";
-    src: url('./assets/fonts/Garamond-Regular.ttf') format("opentype");
+  font-family: "Garamond Regular";
+  src: url('./assets/fonts/Garamond-Regular.ttf') format("opentype");
 }
 
 body {
@@ -53,8 +52,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn-primary {
   @extend .btn-danger;
 }
-
-.btn-primary:focus, .btn-outline-secondary:focus {
+.btn-primary:focus, .dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
 }
 
@@ -132,18 +130,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   @extend .btn-primary:focus;
 }
 
-.btn-outline-secondary {
+.dropdown-toggle {
+  @extend .btn-outline-secondary;
   font-family: Arial !important;
   text-transform: none;
   width: 100%;
-}
-
-.dropdown-toggle-split {
-  width: auto;
-}
-
-.dropdown-toggle-split::after {
-  position: static !important;
 }
 
 .dropdown-toggle::after {
@@ -156,7 +147,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   width: 100%;
 }
 
-.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+.dropdown-toggle:hover, .dropdown-toggle:focus {
   background-color: $white !important;
   color: $gray-400 !important;
 }
@@ -177,15 +168,3 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   background-color: $gray-100;
   border-color: $gray-600;
 }
-// .form-check {
-//   -webkit-appearance:none;
-//   width: 20px;
-//   height: 20px;
-//   background: white;
-//   border-radius: 0;
-//   border:1px solid $gray-300;
-// }
-//
-// .form-check:checked {
-//   background-color: $gray-400;
-// }
