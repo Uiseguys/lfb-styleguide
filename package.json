@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "@ui-guys/stencil-bs-ui-lib": "^0.8.10",
+    "@ui-guys/stencil-bs-ui-lib": "latest",
     "bootstrap-scss": "^4.1.2",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
