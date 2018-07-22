@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn-primary {
   @extend .btn-danger;
 }
-.btn-primary:focus, .dropdown-toggle:focus {
+.btn-primary:focus, .dropdown-toggle:focus, .btn-outline-secondary:focus {
   box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
 }
 
@@ -111,10 +111,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .form-control-sm {
   font-size: 13px !important;
+  height: 28px !important;
 }
 
 .form-control {
   font-size: 16px;
+  height: 35px;
 }
 
 .form-control:disabled {
@@ -124,6 +126,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .form-control-lg {
   font-size: 20px !important;
+  height: 50px !important;
 }
 
 .form-control:focus {
@@ -195,5 +198,13 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: $yellow; 
+  color: $yellow;
+}
+
+.form-control {
+  border-color: $gray-600;
+}
+
+button.bg-primary:focus, button.bg-primary:hover {
+  background-color: #fffde9 !important;
 }

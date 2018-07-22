@@ -209,5 +209,17 @@ export class AppComponent {
         ,
         'Vega, Suki L.'
         ];
-
+        isClassActive = true;
+        getSearchText() {
+          if (this.isClassActive) {
+            return 'Search';
+          }
+          return 'Close';
+        }
+        getTitleText() {
+          if (this.isClassActive) {
+            return 'Meine Buchungen';
+          }
+          return 'Suche';
+        }
 }

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <header class="position-fixed bg-white">
+  <header class="position-fixed border-secondary" [ngClass]="{'bg-primary': !isClassActive, 'border-bottom': !isClassActive, 'bg-white': isClassActive }">
     <div class="container">
         <div class="row pt-5 pb-5">
             <div class="col-md-4 text-left row">
@@ -12,11 +12,68 @@
                 </div>
             </div>
             <div class="col-md-4 text-center">
-                <h2><u>Meine Buchungen</u></h2>
+                <h2><u>{{getTitleText()}}</u></h2>
             </div>
             <div class="col-md-4 text-right">
-                Search
+                <button class="btn shadow-none" [ngClass]="{'bg-primary': !isClassActive, 'bg-white': isClassActive }" type="button" name="button" (click)="isClassActive = !isClassActive;">
+                  {{getSearchText()}}
+                </button>
             </div>
+        </div>
+        <div class="pb-5" [ngClass]="{'d-none': isClassActive }">
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="sr-only" for="headerinput1">Nummer</label>
+                  <input type="text" class="form-control mb-2 mr-sm-2" id="headerinput1" placeholder="Veranstaltungstitel, Nummer">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label class="sr-only" for="headerdropdown1">Ort</label>
+                  <cwc-dropdown id="headerdropdown1">
+                      <div class="btn-group w-100">
+                          <button class="btn btn-outline-secondary text-left">
+                              Ort
+                          </button>
+                          <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                  type="button" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="true">
+                          </button>
+                          <div slot="dropdown-menu" class="dropdown-menu">
+                              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                          </div>
+                      </div>
+                  </cwc-dropdown>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label class="sr-only" for="headerdropdown2">Umkreis</label>
+                  <cwc-dropdown id="headerdropdown2">
+                      <div class="btn-group w-100">
+                          <button class="btn btn-outline-secondary text-left">
+                              Umkreis
+                          </button>
+                          <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                  type="button" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="true">
+                          </button>
+                          <div slot="dropdown-menu" class="dropdown-menu">
+                              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                          </div>
+                      </div>
+                  </cwc-dropdown>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Suchen</button>
+              </div>
+            </div>
+          </form>
         </div>
     </div>
   </header>
@@ -70,9 +127,6 @@
                 <cwc-autocomplete-select placeholder="Search something e.g. 'Argentina'"
                                          class="border-form-control" [data]="names"></cwc-autocomplete-select>
                 <br />
-                <!-- <cwc-tag class="mx-1" text='Herr Muller' closable="true"></cwc-tag> -->
-                <!-- <cwc-tag class="mx-1" text='Frau Forster' closable="true"></cwc-tag> -->
-                <!-- <cwc-typeahead googleAutocomplete="true" placeholder="Search for a location e.g 'Berlin'"></cwc-typeahead> -->
             </div>
             <div class="row">
                 <div class="col-md-6">
