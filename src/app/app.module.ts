@@ -3,6 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import '@ui-guys/stencil-bs-ui-lib/dist/ui-lib';
+import '@ui-guys/form-generator/dist/form-generator';
 
 @NgModule({
   declarations: [
