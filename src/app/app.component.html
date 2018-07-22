@@ -1,5 +1,6 @@
 <div class="container-fluid">
-    <div class="container position-fixed">
+  <header class="position-fixed bg-white">
+    <div class="container">
         <div class="row pt-5 pb-5">
             <div class="col-md-4 text-left row">
                 <div class="col-sm-3">
@@ -18,242 +19,245 @@
             </div>
         </div>
     </div>
-    <div class="position-absolute">
-      <div class="btn-toolbar bg-warning justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
-          <div class="btn-group btn-group-lg mr-2" role="group" aria-label="First group">
-              <button type="button" class="btn btn-warning">1</button>
-          </div>
-          <div class="btn-group btn-group-lg mr-2" role="group" aria-label="Second group">
-              <button type="button" class="btn btn-warning">2</button>
-              <button type="button" class="btn btn-warning">3</button>
-              <button type="button" class="btn btn-warning">4</button>
-              <button type="button" class="btn btn-warning">5</button>
-          </div>
-          <div class="btn-group btn-group-lg" role="group" aria-label="Third group">
-              <button type="button" class="btn btn-warning">6</button>
-              <button type="button" class="btn btn-warning">7</button>
-              <button type="button" class="btn btn-warning">8</button>
-              <button type="button" class="btn btn-warning">9</button>
-              <button type="button" class="btn btn-warning">10</button>
-          </div>
-      </div>
-      <div class="container mt-5">
-          <h1>[ Bearbeitungsmodus ]</h1>
-      </div>
-      <div class="container">
-          <div class="bg-light mt-5 mb-3 pt-2 pb-2 pl-3">
-              <div class="row">
-                  <div class="col-md-4 mt-1">
-                      <strong>Basisdaten</strong>
-                  </div>
-                  <div class="col-md-8">
-                      <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
-                          <div class="btn-group mr-2" role="group" aria-label="First group">
-                              <button type="button" class="btn btn-outline-secondary">1</button>
-                          </div>
-                          <div class="btn-group mr-2" role="group" aria-label="Second group">
-                              <button type="button" class="btn btn-outline-secondary">2</button>
-                          </div>
-                          <div class="btn-group mr-2" role="group" aria-label="Third group">
-                              <button type="button" class="btn btn-outline-secondary">3</button>
-                          </div>
-                          <div class="btn-group mr-2" role="group" aria-label="Fourth group">
-                              <button type="button" class="btn btn-outline-secondary" disabled>4</button>
-                          </div>
-                          <div class="btn-group mr-3" role="group" aria-label="Fifth group">
-                              <button type="button" class="btn btn-outline-secondary">5</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <form>
-              <div class="form-group">
-                  <label class="control-label" for="input1">Bearbeitende Person(en)</label>
-                  <cwc-autocomplete-select placeholder="Search something e.g. 'Argentina'"
-                                           class="border-form-control" [data]="names"></cwc-autocomplete-select>
-                  <br />
-                  <!-- <cwc-tag class="mx-1" text='Herr Muller' closable="true"></cwc-tag> -->
-                  <!-- <cwc-tag class="mx-1" text='Frau Forster' closable="true"></cwc-tag> -->
-                  <!-- <cwc-typeahead googleAutocomplete="true" placeholder="Search for a location e.g 'Berlin'"></cwc-typeahead> -->
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <label class="control-label" for="input2">Veranstaltungstitel</label>
-                          <input class="form-control" id="input2" type="text" name="" value="">
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <label class="control-label" for="input3">Veranstaltungsnummer</label>
-                          <input readonly id="input3" class="form-control-plaintext" type="text" name="" value="88733943">
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <label class="control-label" for="input4">Veranstaltungstyp</label>
-                          <input id="input4" class="form-control" type="text" name="" value="">
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <label class="control-label">Eigenschaften im Online-Portal</label>
-                          <div class="row mt-2 mb-2">
-                              <div class="checkbox col-md-6">
-                                  <label>
-                                      <input class="form-check form-check-inline" type="checkbox" name="" value="">
-                                      Sichtbar
-                                  </label>
-                              </div>
-                              <div class="checkbox col-md-6">
-                                  <label>
-                                      <input class="form-check form-check-inline" type="checkbox" name="" value="">
-                                      Buchbar
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label class="control-label" for="">Inhalt</label>
-                  <textarea class="form-control" rows="4"></textarea>
-              </div>
-              <div class="form-group">
-                  <label class="control-label" for="">Ziel der Veranstaltung</label>
-                  <textarea class="form-control" rows="4"></textarea>
-              </div>
-              <div class="mt-5">
-                  <div class="mb-4">
-                      <strong>Kataloggliederung</strong>
-                  </div>
-                  <div class="row mb-3">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="control-label" for="dropdown1">Hauptbereich</label>
-                              <br>
-                              <cwc-dropdown id="dropdown1">
-                                  <div class="btn-group w-100">
-                                      <button class="btn btn-outline-secondary text-left">
-                                          QB | Qualitatsbereich Unterricht
-                                      </button>
-                                      <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                              type="button" data-toggle="dropdown"
-                                              aria-haspopup="true" aria-expanded="true">
-                                      </button>
-                                      <div slot="dropdown-menu" class="dropdown-menu">
-                                          <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                                          <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                      </div>
-                                  </div>
-                                  <!-- <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
-                                  type="button" data-toggle="dropdown"
-                                  aria-haspopup="true" aria-expanded="true">
-                                  QB | Qualitatsbereich Unterricht
-                                  </button>
-                                  <div slot="dropdown-menu" class="dropdown-menu">
+  </header>
+  <div class="position-absolute">
+    <div class="btn-toolbar bg-warning justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group btn-group-lg mr-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-warning">1</button>
+            <button type="button" class="btn btn-warning">2</button>
+        </div>
+        <div class="btn-group btn-group-lg mr-2" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-warning">3</button>
+            <button type="button" class="btn btn-warning">4</button>
+            <button type="button" class="btn btn-warning">5</button>
+            <button type="button" class="btn btn-warning">6</button>
+            <button type="button" class="btn btn-warning">7</button>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h1>[ Bearbeitungsmodus ]</h1>
+    </div>
+    <div class="container">
+        <div class="bg-light mt-5 mb-3 pt-2 pb-2 pl-3">
+            <div class="row">
+                <div class="col-md-4 mt-1">
+                    <strong>Basisdaten</strong>
+                </div>
+                <div class="col-md-8">
+                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-secondary">1</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-outline-secondary">2</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="Third group">
+                            <button type="button" class="btn btn-outline-secondary">3</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+                            <button type="button" class="btn btn-outline-secondary" disabled>4</button>
+                        </div>
+                        <div class="btn-group mr-3" role="group" aria-label="Fifth group">
+                            <button type="button" class="btn btn-outline-secondary">5</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label class="control-label" for="input1">Bearbeitende Person(en)</label>
+                <cwc-autocomplete-select placeholder="Search something e.g. 'Argentina'"
+                                         class="border-form-control" [data]="names"></cwc-autocomplete-select>
+                <br />
+                <!-- <cwc-tag class="mx-1" text='Herr Muller' closable="true"></cwc-tag> -->
+                <!-- <cwc-tag class="mx-1" text='Frau Forster' closable="true"></cwc-tag> -->
+                <!-- <cwc-typeahead googleAutocomplete="true" placeholder="Search for a location e.g 'Berlin'"></cwc-typeahead> -->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="input2">Veranstaltungstitel</label>
+                        <input class="form-control" id="input2" type="text" name="" value="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="input3">Veranstaltungsnummer</label>
+                        <input readonly id="input3" class="form-control-plaintext" type="text" name="" value="88733943">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="input4">Veranstaltungstyp</label>
+                        <input id="input4" class="form-control" type="text" name="" value="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Eigenschaften im Online-Portal</label>
+                        <div class="row mt-2 mb-2">
+                            <div class="checkbox col-md-6">
+                                <label>
+                                    <input class="form-check form-check-inline" type="checkbox" name="" value="">
+                                    Sichtbar
+                                </label>
+                            </div>
+                            <div class="checkbox col-md-6">
+                                <label>
+                                    <input class="form-check form-check-inline" type="checkbox" name="" value="">
+                                    Buchbar
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="">Inhalt</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="">Ziel der Veranstaltung</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+            <div class="mt-5">
+                <div class="mb-4">
+                    <strong>Kataloggliederung</strong>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label" for="dropdown1">Hauptbereich</label>
+                            <br>
+                            <cwc-dropdown id="dropdown1">
+                                <div class="btn-group w-100">
+                                    <button class="btn btn-outline-secondary text-left">
+                                        QB | Qualitatsbereich Unterricht
+                                    </button>
+                                    <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                            type="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="true">
+                                    </button>
+                                    <div slot="dropdown-menu" class="dropdown-menu">
+                                        <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                                        <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                                    </div>
+                                </div>
+                                <!-- <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                                QB | Qualitatsbereich Unterricht
+                                </button>
+                                <div slot="dropdown-menu" class="dropdown-menu">
+                                  <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                                  <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                                </div> -->
+                            </cwc-dropdown>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label" for="dropdown2">Bereich</label>
+                            <cwc-dropdown id="dropdown2">
+                                <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
+                                        type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="true">
+                                    Sprachlich-literarischer Bereich
+                                </button>
+                                <div slot="dropdown-menu" class="dropdown-menu">
                                     <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                                     <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                  </div> -->
-                              </cwc-dropdown>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="control-label" for="dropdown2">Bereich</label>
-                              <cwc-dropdown id="dropdown2">
-                                  <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
-                                          type="button" data-toggle="dropdown"
-                                          aria-haspopup="true" aria-expanded="true">
-                                      Sprachlich-literarischer Bereich
-                                  </button>
-                                  <div slot="dropdown-menu" class="dropdown-menu">
-                                      <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                                      <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                  </div>
-                              </cwc-dropdown>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row mb-3">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="control-label" for="dropdown3">Teilbereich</label>
-                              <cwc-dropdown id="dropdown3">
-                                  <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
-                                          type="button" data-toggle="dropdown"
-                                          aria-haspopup="true" aria-expanded="true">
-                                      Bilingualer Unterricht
-                                  </button>
-                                  <div slot="dropdown-menu" class="dropdown-menu">
-                                      <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                                      <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                  </div>
-                              </cwc-dropdown>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="control-label" for="dropdown4">Unterbereich</label>
-                              <cwc-dropdown id="dropdown4">
-                                  <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
-                                          type="button" data-toggle="dropdown"
-                                          aria-haspopup="true" aria-expanded="true">
-                                      Keiner
-                                  </button>
-                                  <div slot="dropdown-menu" class="dropdown-menu">
-                                      <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                                      <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                  </div>
-                              </cwc-dropdown>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row mb-3">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label class="control-label" for="dropdown5">Themenschwerpunkt</label>
-                              <cwc-dropdown id="dropdown5">
-                                  <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
-                                          type="button" data-toggle="dropdown"
-                                          aria-haspopup="true" aria-expanded="true">
-                                      IF | Individuelle Fortbildung
-                                  </button>
-                                  <div slot="dropdown-menu" class="dropdown-menu">
-                                      <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                                      <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                  </div>
-                              </cwc-dropdown>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                      </div>
-                  </div>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+                                </div>
+                            </cwc-dropdown>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label" for="dropdown3">Teilbereich</label>
+                            <cwc-dropdown id="dropdown3">
+                                <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
+                                        type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="true">
+                                    Bilingualer Unterricht
+                                </button>
+                                <div slot="dropdown-menu" class="dropdown-menu">
+                                    <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                                    <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                                </div>
+                            </cwc-dropdown>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label" for="dropdown4">Unterbereich</label>
+                            <cwc-dropdown id="dropdown4">
+                                <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
+                                        type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="true">
+                                    Keiner
+                                </button>
+                                <div slot="dropdown-menu" class="dropdown-menu">
+                                    <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                                    <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                                </div>
+                            </cwc-dropdown>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label" for="dropdown5">Themenschwerpunkt</label>
+                            <cwc-dropdown id="dropdown5">
+                                <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle text-left"
+                                        type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="true">
+                                    IF | Individuelle Fortbildung
+                                </button>
+                                <div slot="dropdown-menu" class="dropdown-menu">
+                                    <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                                    <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                                </div>
+                            </cwc-dropdown>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-      </div>
     </div>
+    <footer class="bg-light">
+      <div class="container-fluid">
+        <div class="container">
+          HELLO
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
