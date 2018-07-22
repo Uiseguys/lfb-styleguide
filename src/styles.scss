@@ -130,24 +130,25 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   @extend .btn-primary:focus;
 }
 
-.dropdown-toggle {
-  @extend .btn-outline-secondary;
+.btn-outline-secondary {
   font-family: Arial !important;
   text-transform: none;
   width: 100%;
 }
 
-.dropdown-toggle::after {
-  position: absolute;
-  right: 10px;
-  top: 1rem;
+.dropdown-toggle-split {
+  width: auto;
+}
+
+.dropdown-toggle-split::after {
+  position: static !important;
 }
 
 .dropdown-menu {
   width: 100%;
 }
 
-.dropdown-toggle:hover, .dropdown-toggle:focus {
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
   background-color: $white !important;
   color: $gray-400 !important;
 }
