@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <header class="position-fixed border-secondary" [ngClass]="{'bg-primary': !isClassActive, 'border-bottom': !isClassActive, 'bg-white': isClassActive }">
+  <header class="bg-primary position-fixed border-secondary" [ngClass]="{ 'border-bottom': !isClassActive }">
     <div class="container">
         <div class="row pt-5 pb-5">
             <div class="col-md-4 text-left row">
@@ -15,7 +15,7 @@
                 <h2><u>{{getTitleText()}}</u></h2>
             </div>
             <div class="col-md-4 text-right">
-                <button class="btn shadow-none" [ngClass]="{'bg-primary': !isClassActive, 'bg-white': isClassActive }" type="button" name="button" (click)="isClassActive = !isClassActive;">
+                <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
                   {{getSearchText()}}
                 </button>
             </div>
