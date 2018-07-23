@@ -242,7 +242,7 @@ export class AppComponent {
                 "type": "object",
                 "placeholder": "Search something e.g. 'Argentina'",
                 "searchKey": "data.name",
-                "data": [
+                "enum": [
                   {
                     "type": 'country',
                     "data": {
