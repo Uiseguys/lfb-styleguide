@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
 }
 
-.btn:hover {
+.btn-primary:hover, .btn-outline-secondary:hover {
   box-shadow: 0 0 1rem 0.1rem lighten($gray-300, 30%);
 }
 
