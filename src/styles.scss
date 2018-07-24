@@ -236,4 +236,5 @@ scb-badge > span > span > span {
 
 scb-badge > span > span > span:hover {
   @extend .btn-warning:hover;
+  cursor: pointer;
 }
