@@ -227,3 +227,13 @@ header {
 .footerlogo {
   width: 15%;
 }
+
+scb-badge > span > span > span {
+  border-radius: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+scb-badge > span > span > span:hover {
+  @extend .btn-warning:hover;
+}
