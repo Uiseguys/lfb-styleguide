@@ -2,9 +2,12 @@
   <header class="bg-primary position-fixed border-secondary" [ngClass]="{ 'border-bottom': !isClassActive }">
     <div class="container">
         <div class="row pt-5 pb-5">
-            <div class="col-md-4 text-left row">
-              <img class="logo ml-2 mr-3" src="../assets/images/Grosses_Landeswappen_Baden_Wuerttemberg.svg" alt="logo" />
-              <h3 class="mb-0">Lehrerfortbildung<br>Baden-Württemberg</h3>
+            <div class="logo col-md-4 text-left">
+              <img class="ml-2 mr-3 float-left" src="../assets/images/Grosses_Landeswappen_Baden_Wuerttemberg.svg" alt="logo" />
+              <div class="">
+                <h3 class="mb-0">Lehrerfortbildung</h3>
+                <h3 class="mb-0">Baden-Württemberg</h3>
+              </div>
             </div>
             <div class="col-md-4 text-center">
                 <h2><u>{{getTitleText()}}</u></h2>
