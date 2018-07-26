@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-4 text-right">
                 <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
-                  {{getSearchText()}}
+                  <fa name={{getSearchButton()}}></fa>
                 </button>
             </div>
         </div>
@@ -82,15 +82,18 @@
   <div class="position-absolute">
     <div class="btn-toolbar bg-warning justify-content-center pt-2 pb-2" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" class="btn btn-warning rounded-circle">1</button>
-            <button type="button" class="btn btn-warning rounded-circle">2</button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="minus"></fa></button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="plus"></fa></button>
+        </div>
+        <div class="" style="font-size: 1.5rem">
+          |
         </div>
         <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="button" class="btn btn-warning rounded-circle">3</button>
-            <button type="button" class="btn btn-warning rounded-circle">4</button>
-            <button type="button" class="btn btn-warning rounded-circle">5</button>
-            <button type="button" class="btn btn-warning rounded-circle">6</button>
-            <button type="button" class="btn btn-warning rounded-circle">7</button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="trash"></fa></button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="close"></fa></button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="print"></fa></button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="eye"></fa></button>
+            <button type="button" class="btn btn-warning rounded-circle"><fa name="check"></fa></button>
         </div>
     </div>
     <div class="container mt-5">

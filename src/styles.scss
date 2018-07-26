@@ -276,7 +276,7 @@ cwc-dropdown > .btn-group:hover {
 }
 
 .dropdown-item:hover::after {
-  content: "-->";
+  content: "\2192";
   position: absolute;
   right: 10px;
 }
