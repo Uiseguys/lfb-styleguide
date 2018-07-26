@@ -239,6 +239,7 @@ scb-badge > span > span > span:hover {
   cursor: pointer;
 }
 
-// scb-badge > span {
-//   height: 28px;
-// }
+scb-badge > span {
+  height: 28px;
+  transform: translateY(-3px);
+}
