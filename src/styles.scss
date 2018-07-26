@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Garamond Regular", Helvetica, Arial;
 }
 
-.control-label {
+.control-label, .label-wrapper {
   font-size: 12px;
   font-weight: 900;
   color: $gray-300;
@@ -238,3 +238,7 @@ scb-badge > span > span > span:hover {
   @extend .btn-warning:hover;
   cursor: pointer;
 }
+
+// scb-badge > span {
+//   height: 28px;
+// }
