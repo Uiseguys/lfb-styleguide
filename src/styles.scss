@@ -249,7 +249,7 @@ scb-badge > span > span {
 }
 
 cwc-dropdown .btn-outline-secondary:hover {
-  background-color: $white;
+  background-color: $white !important;
   box-shadow: none !important;
 }
 
@@ -258,11 +258,15 @@ cwc-dropdown .btn-outline-secondary:focus {
   box-shadow: none !important;
 }
 
-cwc-dropdown > .btn-group:hover > .btn, cwc-dropdown > .btn-group:focus > .btn {
-  border-color: $gray-400;
+cwc-dropdown > .btn-group:hover > .btn, cwc-dropdown > .btn-group.show > .btn {
+  border-color: $gray-400 !important;
   color:  $gray-400 !important;
 }
 
 cwc-dropdown > .btn-group:hover {
   box-shadow: 0 0 0.5rem 0.1rem lighten($gray-300, 30%) !important;
+}
+
+.dropdown-toggle.dropdown-toggle-split {
+  background-color: $white !important;
 }
