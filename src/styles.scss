@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Garamond Regular", Helvetica, Arial;
 }
 
-.control-label {
+.control-label, .label-wrapper {
   font-size: 12px;
   font-weight: 900;
   color: $gray-300;
@@ -46,14 +46,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: $black;
   border-radius: 0;
   font-weight: 100;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn-primary {
   @extend .btn-danger;
 }
-.btn-primary:focus, .dropdown-toggle:focus, .btn-outline-secondary:focus {
+
+.btn-primary:focus {
   box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 1rem 0.1rem lighten($gray-300, 30%);
 }
 
 .swatch-100 {
@@ -97,7 +102,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn {
   text-transform: uppercase;
   height: 35px;
-  font-family: "Gudea Bold", Helvetica, Arial;
+  font-family: "Gudea Regular", Helvetica, Arial;
   font-size: 16px;
 }
 .btn-lg {
@@ -117,6 +122,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .form-control {
   font-size: 16px;
   height: 35px;
+  border-color: $gray-300;
 }
 
 .form-control:disabled {
@@ -137,6 +143,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Arial !important;
   text-transform: none;
   width: 100%;
+  border-color: $gray-300;
+  background-color: $white;
+  color: $gray-300 !important;
 }
 
 .dropdown-toggle-split {
@@ -152,7 +161,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .btn-outline-secondary:hover, .btn-outline-secondary:focus {
-  background-color: $white !important;
+  background-color: $gray-100;
   color: $gray-400 !important;
 }
 
@@ -162,10 +171,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .custom-select {
   -webkit-appearance: none;
-}
-
-.btn-outline-secondary {
-  background-color: $white;
 }
 
 .btn-outline-secondary[disabled], .btn-outline-secondary.disabled {
@@ -188,23 +193,90 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .position-absolute {
-  top: 150px;
+  top: 144px;
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: $gray-700;
 }
 
 a:hover {
   text-decoration: underline;
-  color: $yellow;
+  color: $gray-700;
 }
 
-.form-control {
-  border-color: $gray-600;
+.form-control:hover, .btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  border-color: $gray-400 !important;
+  box-shadow: 0 0 0.5rem 0.1rem lighten($gray-300, 30%);
 }
 
 button.bg-primary:focus, button.bg-primary:hover {
   background-color: #fffde9 !important;
+}
+
+header {
+  box-shadow: 0 0 1.5rem 0.3rem lighten($gray-300, 30%);
+}
+
+.logo > img {
+  width: 20%;
+}
+
+.footerlogo {
+  width: 15%;
+}
+
+scb-badge > span > span > span {
+  border-radius: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+scb-badge > span > span > span:hover {
+  @extend .btn-warning:hover;
+  cursor: pointer;
+}
+
+scb-badge > span {
+  height: 24px;
+  transform: translateY(-2px);
+}
+
+scb-badge > span > span {
+  height: 20px;
+  transform: translateY(-2px);
+}
+
+cwc-dropdown .btn-outline-secondary:hover {
+  background-color: $white !important;
+  box-shadow: none !important;
+}
+
+cwc-dropdown .btn-outline-secondary:focus {
+  background-color: $white !important;
+  box-shadow: none !important;
+}
+
+cwc-dropdown > .btn-group:hover > .btn, cwc-dropdown > .btn-group.show > .btn {
+  border-color: $gray-400 !important;
+  color:  $gray-400 !important;
+}
+
+cwc-dropdown > .btn-group:hover {
+  box-shadow: 0 0 0.5rem 0.1rem lighten($gray-300, 30%) !important;
+}
+
+.dropdown-toggle.dropdown-toggle-split {
+  background-color: $white !important;
+}
+
+.dropdown-item:hover {
+  background-color: $white;
+}
+
+.dropdown-item:hover::after {
+  content: "\2192";
+  position: absolute;
+  right: 10px;
 }

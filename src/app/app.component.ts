@@ -214,11 +214,11 @@ export class AppComponent {
 
     isClassActive = true;
 
-    getSearchText() {
+    getSearchButton() {
       if (this.isClassActive) {
-        return 'Search';
+        return 'search';
       }
-      return 'Close';
+      return 'close';
     }
 
     getTitleText() {
