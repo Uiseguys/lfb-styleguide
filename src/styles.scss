@@ -270,3 +270,13 @@ cwc-dropdown > .btn-group:hover {
 .dropdown-toggle.dropdown-toggle-split {
   background-color: $white !important;
 }
+
+.dropdown-item:hover {
+  background-color: $white;
+}
+
+.dropdown-item:hover::after {
+  content: "-->";
+  position: absolute;
+  right: 10px;
+}
