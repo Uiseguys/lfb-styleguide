@@ -1,99 +1,107 @@
 <div class="container-fluid">
   <header class="bg-primary position-fixed border-secondary" [ngClass]="{ 'border-bottom': !isClassActive }">
     <div class="container">
-        <div class="row pt-5 pb-5">
-            <div class="logo col-md-4 text-left">
-              <img class="ml-2 mr-3 float-left" src="../assets/images/Grosses_Landeswappen_Baden_Wuerttemberg.svg" alt="logo" />
-              <div class="">
-                <h3 class="mb-0">Lehrerfortbildung</h3>
-                <h3 class="mb-0">Baden-Württemberg</h3>
-              </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <h2><u>{{getTitleText()}}</u></h2>
-            </div>
-            <div class="col-md-4 text-right">
-                <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
-                  <fa name={{getSearchButton()}}></fa>
-                </button>
-            </div>
+      <div class="row pt-5 pb-5">
+        <div class="logo col-md-4 text-left">
+          <img class="ml-2 mr-3 float-left" src="../assets/images/Grosses_Landeswappen_Baden_Wuerttemberg.svg" alt="logo" />
+          <div class="">
+            <h3 class="mb-0">Lehrerfortbildung</h3>
+            <h3 class="mb-0">Baden-Württemberg</h3>
+          </div>
         </div>
-        <div class="pb-5" [ngClass]="{'d-none': isClassActive }">
-          <form>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="sr-only" for="headerinput1">Nummer</label>
-                  <input type="text" class="form-control mb-2 mr-sm-2" id="headerinput1" placeholder="Veranstaltungstitel, Nummer">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label class="sr-only" for="headerdropdown1">Ort</label>
-                  <cwc-dropdown id="headerdropdown1">
-                      <div class="btn-group w-100">
-                          <button class="btn btn-outline-secondary text-left"
-                            type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="true">
-                              Ort
-                          </button>
-                          <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                  type="button" data-toggle="dropdown"
-                                  aria-haspopup="true" aria-expanded="true">
-                          </button>
-                          <div slot="dropdown-menu" class="dropdown-menu">
-                              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                          </div>
-                      </div>
-                  </cwc-dropdown>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label class="sr-only" for="headerdropdown2">Umkreis</label>
-                  <cwc-dropdown id="headerdropdown2">
-                      <div class="btn-group w-100">
-                          <button class="btn btn-outline-secondary text-left"
-                            type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="true">
-                              Umkreis
-                          </button>
-                          <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                  type="button" data-toggle="dropdown"
-                                  aria-haspopup="true" aria-expanded="true">
-                          </button>
-                          <div slot="dropdown-menu" class="dropdown-menu">
-                              <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
-                              <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                          </div>
-                      </div>
-                  </cwc-dropdown>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <button type="submit" class="btn btn-primary w-100">Suchen</button>
+        <div class="col-md-4 text-center">
+            <h2><u>{{getTitleText()}}</u></h2>
+        </div>
+        <div class="col-md-4 text-right">
+            <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
+              <fa name={{getSearchButton()}}></fa>
+            </button>
+        </div>
+      </div>
+      <div class="pb-5" [ngClass]="{'d-none': isClassActive }">
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="sr-only" for="headerinput1">Nummer</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="headerinput1" placeholder="Veranstaltungstitel, Nummer">
               </div>
             </div>
-          </form>
-        </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label class="sr-only" for="headerdropdown1">Ort</label>
+                <cwc-dropdown id="headerdropdown1">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-secondary text-left"
+                          type="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                            Ort
+                        </button>
+                        <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label class="sr-only" for="headerdropdown2">Umkreis</label>
+                <cwc-dropdown id="headerdropdown2">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-secondary text-left"
+                          type="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                            Umkreis
+                        </button>
+                        <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <button type="submit" class="btn btn-primary w-100">Suchen</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </header>
   <div class="position-absolute">
     <div class="btn-toolbar bg-warning justify-content-center pt-2 pb-2" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="minus"></fa></button>
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="plus"></fa></button>
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="minus"></fa></button>
+          <!-- <scb-tooltip
+          tooltip-title="test"
+          type="span"
+          trigger="hover"
+          placement=""
+          offset=""
+          delay="0"
+          ></scb-tooltip> -->
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="plus"></fa></button>
         </div>
         <div class="" style="font-size: 1.5rem">
           |
         </div>
         <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="trash"></fa></button>
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="close"></fa></button>
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="print"></fa></button>
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="eye"></fa></button>
-            <button type="button" class="btn btn-warning rounded-circle"><fa name="check"></fa></button>
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="trash"></fa></button>
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="close"></fa></button>
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="print"></fa></button>
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="eye"></fa></button>
+          <button type="button" class="btn btn-warning rounded-circle"><fa name="check"></fa></button>
         </div>
     </div>
     <div class="container mt-5">
@@ -128,6 +136,7 @@
         </div>
         <form>
             <div class="form-group">
+                <label class="control-label" for="input1">Bearbeitende Person(en)</label>
                 <cwc-autocomplete-select label="Bearbeitende Person(en)" placeholder="Search something e.g. 'Argentina'"
                                          class="border-form-control" [data]="names"></cwc-autocomplete-select>
                 <br />
