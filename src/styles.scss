@@ -280,3 +280,9 @@ cwc-dropdown > .btn-group:hover {
   position: absolute;
   right: 10px;
 }
+
+.text-left.dropdown-toggle::after {
+  position: absolute;
+  top: 42%;
+  right: 10px;
+}
