@@ -271,11 +271,11 @@ cwc-dropdown > .btn-group:hover {
   background-color: $white !important;
 }
 
-.dropdown-item:hover {
+cwc-dropdown .dropdown-item:hover {
   background-color: $white;
 }
 
-.dropdown-item:hover::after {
+cwc-dropdown .dropdown-item:hover::after {
   content: "\2192";
   position: absolute;
   right: 10px;
@@ -285,4 +285,8 @@ cwc-dropdown > .btn-group:hover {
   position: absolute;
   top: 42%;
   right: 10px;
+}
+
+cwc-autocomplete-select .form-control {
+  height: auto;
 }
