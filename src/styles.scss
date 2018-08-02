@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .position-absolute {
-  top: 196px;
+  top: 198px;
 }
 
 a {
@@ -304,4 +304,8 @@ cwc-popper > .popper > .dropdown-menu {
   // height: 20px;
   // font-size: 12px;
   font-family: "Gudea Bold", Helvetica, Arial;
+}
+
+.translate-form {
+  transform: translateY(99px);
 }

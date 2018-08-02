@@ -1,5 +1,4 @@
 <div class="container-fluid">
-  <!-- <header class="bg-primary position-fixed border-secondary" [ngClass]="{ 'border-bottom': !isClassActive }"> -->
   <header class="bg-primary position-fixed border-secondary">
     <div class="container">
       <div class="row pt-5 pb-5">
@@ -166,7 +165,7 @@
         </div>
     </div>
   </header>
-  <div class="position-absolute">
+  <div class="position-absolute" [ngClass]="{ 'translate-form': !isClassActive }">
     <div class="container mt-5">
         <h1>[ Bearbeitungsmodus ]</h1>
     </div>
