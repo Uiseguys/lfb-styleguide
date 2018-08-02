@@ -1,5 +1,6 @@
 <div class="container-fluid">
-  <header class="bg-primary position-fixed border-secondary" [ngClass]="{ 'border-bottom': !isClassActive }">
+  <!-- <header class="bg-primary position-fixed border-secondary" [ngClass]="{ 'border-bottom': !isClassActive }"> -->
+  <header class="bg-primary position-fixed border-secondary">
     <div class="container">
       <div class="row pt-5 pb-5">
         <div class="logo col-md-4 text-left">
@@ -78,32 +79,94 @@
         </form>
       </div>
     </div>
-  </header>
-  <div class="position-absolute">
     <div class="btn-toolbar bg-warning justify-content-center pt-2 pb-2" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="minus"></fa></button>
-          <!-- <scb-tooltip
-          tooltip-title="test"
-          type="span"
-          trigger="hover"
-          placement=""
-          offset=""
-          delay="0"
-          ></scb-tooltip> -->
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="plus"></fa></button>
+          <button id="minus" type="button" class="btn btn-warning rounded-circle"><fa name="minus"></fa></button>
+          <div>
+            <cwc-popper
+              refid="minus"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Minus
+              </div>
+            </cwc-popper>
+          </div>
+          <button id="plus"type="button" class="btn btn-warning rounded-circle"><fa name="plus"></fa></button>
+          <div>
+            <cwc-popper
+              refid="plus"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Plus
+              </div>
+            </cwc-popper>
+          </div>
         </div>
         <div class="" style="font-size: 1.5rem">
           |
         </div>
-        <div class="btn-group mr-2" role="group" aria-label="Second group">
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="trash"></fa></button>
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="close"></fa></button>
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="print"></fa></button>
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="eye"></fa></button>
-          <button type="button" class="btn btn-warning rounded-circle"><fa name="check"></fa></button>
+        <div class="btn-group ml-2" role="group" aria-label="Second group">
+          <button id="trash" type="button" class="btn btn-warning rounded-circle"><fa name="trash"></fa></button>
+          <div>
+            <cwc-popper
+              refid="trash"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Trash
+              </div>
+            </cwc-popper>
+          </div>
+          <button id="close" type="button" class="btn btn-warning rounded-circle"><fa name="close"></fa></button>
+          <div>
+            <cwc-popper
+              refid="close"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Close
+              </div>
+            </cwc-popper>
+          </div>
+          <button id="print" type="button" class="btn btn-warning rounded-circle"><fa name="print"></fa></button>
+          <div>
+            <cwc-popper
+              refid="print"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Print
+              </div>
+            </cwc-popper>
+          </div>
+          <button id="eye" type="button" class="btn btn-warning rounded-circle"><fa name="eye"></fa></button>
+          <div>
+            <cwc-popper
+              refid="eye"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Eye
+              </div>
+            </cwc-popper>
+          </div>
+          <button id="check" type="button" class="btn btn-warning rounded-circle"><fa name="check"></fa></button>
+          <div>
+            <cwc-popper
+              refid="check"
+              trigger="hover"
+              arrow>
+              <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
+                Check
+              </div>
+            </cwc-popper>
+          </div>
         </div>
     </div>
+  </header>
+  <div class="position-absolute">
     <div class="container mt-5">
         <h1>[ Bearbeitungsmodus ]</h1>
     </div>

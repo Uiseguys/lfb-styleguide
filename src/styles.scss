@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .position-absolute {
-  top: 144px;
+  top: 196px;
 }
 
 a {
@@ -289,4 +289,15 @@ cwc-dropdown .dropdown-item:hover::after {
 
 cwc-autocomplete-select .form-control {
   height: auto;
+}
+
+cwc-popper .popper__arrow {
+  border-bottom-color: $gray-800 !important;
+}
+
+cwc-popper > .popper > .dropdown-menu {
+  // width: 25px;
+  // height: 20px;
+  // font-size: 12px;
+  font-family: "Gudea Bold", Helvetica, Arial;
 }
