@@ -287,6 +287,10 @@ cwc-dropdown .dropdown-item:hover::after {
   right: 10px;
 }
 
+.border-secondary {
+  border-color: $gray-200 !important;
+}
+
 cwc-autocomplete-select .form-control {
   height: auto;
 }
