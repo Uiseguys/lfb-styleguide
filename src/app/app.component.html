@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4 text-right">
             <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
-              <fa name={{getSearchButton()}}></fa>
+              <i class="material-icons">{{getSearchButton()}}</i>
             </button>
         </div>
       </div>
@@ -80,7 +80,9 @@
     </div>
     <div class="btn-toolbar bg-warning justify-content-center border-secondary border-top border-bottom pt-2 pb-2" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button id="minus" type="button" class="btn btn-warning rounded-circle"><fa name="minus"></fa></button>
+          <button id="minus" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">remove</i>
+          </button>
           <div>
             <cwc-popper
               refid="minus"
@@ -91,7 +93,9 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="plus"type="button" class="btn btn-warning rounded-circle"><fa name="plus"></fa></button>
+          <button id="plus"type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">add</i>
+          </button>
           <div>
             <cwc-popper
               refid="plus"
@@ -107,7 +111,9 @@
           |
         </div>
         <div class="btn-group ml-2" role="group" aria-label="Second group">
-          <button id="trash" type="button" class="btn btn-warning rounded-circle"><fa name="trash"></fa></button>
+          <button id="trash" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">delete</i>
+          </button>
           <div>
             <cwc-popper
               refid="trash"
@@ -118,7 +124,9 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="close" type="button" class="btn btn-warning rounded-circle"><fa name="close"></fa></button>
+          <button id="close" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">close</i>
+          </button>
           <div>
             <cwc-popper
               refid="close"
@@ -129,7 +137,9 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="print" type="button" class="btn btn-warning rounded-circle"><fa name="print"></fa></button>
+          <button id="print" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">print</i>
+          </button>
           <div>
             <cwc-popper
               refid="print"
@@ -140,7 +150,9 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="eye" type="button" class="btn btn-warning rounded-circle"><fa name="eye"></fa></button>
+          <button id="eye" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">visibility</i>
+          </button>
           <div>
             <cwc-popper
               refid="eye"
@@ -151,7 +163,9 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="check" type="button" class="btn btn-warning rounded-circle"><fa name="check"></fa></button>
+          <button id="check" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+            <i class="material-icons">done</i>
+          </button>
           <div>
             <cwc-popper
               refid="check"
