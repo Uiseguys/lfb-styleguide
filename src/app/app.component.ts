@@ -231,7 +231,7 @@ export class AppComponent {
     constructor() {
         this.schema = {
           "type": "object",
-          "required": ["checkbox", "min", "max", "startDate", "endDate", "startDateString", "endDateString", "dropdown", "autocomplete"],
+          "required": ["checkbox", "min", "max", "startDate", "endDate", "startDateString", "endDateString", "dropdown", "autocomplete", "wysiwygEditor"],
           "properties": {
             "autocomplete": {
               "$id": "data/properties/autocomplete",
@@ -358,6 +358,15 @@ export class AppComponent {
                 "readonly": true,
                 "enum": ["Automatic", "Manual"]
               }
+            },
+            "wysiwygEditor": {
+              "$id": "data/properties/wysiwygEditor",
+              "type": "string",
+              "stringType": "textarea",
+              "fencing": true,
+              "html": true,
+              "markdown": true,
+              "wysiwyg": true
             }
           }
         };
@@ -377,7 +386,8 @@ export class AppComponent {
           },
           "startDateString": "2007-08-31T16:47+00:00",
           "endDateString": "2007-08-31T16:47+00:00",
-          "dropdown": []
+          "dropdown": [],
+          "wysiwygEditor": "<strong>Initial Text</strong>"
         };
     }
 }
