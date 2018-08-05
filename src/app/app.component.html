@@ -212,7 +212,7 @@
         </div>
         <form>
             <div class="form-group">
-                <label class="control-label" for="input1">Bearbeitende Person(en)</label>
+                <!-- <label class="control-label" for="input1">Bearbeitende Person(en)</label> -->
                 <cwc-autocomplete-select label="Bearbeitende Person(en)" placeholder="Search something e.g. 'Argentina'"
                                          class="border-form-control" [data]="names"></cwc-autocomplete-select>
                 <br />
@@ -243,16 +243,28 @@
                         <label class="control-label">Eigenschaften im Online-Portal</label>
                         <div class="row mt-2 mb-2">
                             <div class="checkbox col-md-6">
-                                <label>
+                              <cwc-switch
+                              id="checkbox1"
+                              for="checkbox1"
+                              label-o-n="on"
+                              label-o-f-f="off"
+                              ></cwc-switch>
+                                <!-- <label>
                                     <input class="form-check form-check-inline" type="checkbox" name="" value="">
                                     Sichtbar
-                                </label>
+                                </label> -->
                             </div>
                             <div class="checkbox col-md-6">
-                                <label>
+                              <cwc-switch
+                              id="checkbox2"
+                              for="checkbox2"
+                              label-o-n=""
+                              label-o-f-f=""
+                              ></cwc-switch>
+                                <!-- <label>
                                     <input class="form-check form-check-inline" type="checkbox" name="" value="">
                                     Buchbar
-                                </label>
+                                </label> -->
                             </div>
                         </div>
                     </div>
