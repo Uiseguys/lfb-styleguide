@@ -1,5 +1,60 @@
-<div class="container-fluid">
-  <header class="bg-primary position-fixed border-secondary">
+<div class="app-wrapper">
+    <cwc-navigation class="with-margin-top" [isCollapsed]="isNavCollapsed">
+            
+        <div slot="primary-actions"> 
+            
+            <cwc-navigation-global-item 
+                [titleText]="'Home'" [isActive]="checkActiveIndex(1)" (click)="setActive(1)"
+                [icon]="'../assets/icons/baseline_home_' + getIconModifier(1) + '_18dp.png'">
+            </cwc-navigation-global-item>
+            <cwc-navigation-global-item [isActive]="checkActiveIndex(2)" (click)="setActive(2)"
+                [titleText]="'Title text'"
+                [icon]="'../assets/icons/baseline_date_range_' + getIconModifier(2) + '_18dp.png'">
+            </cwc-navigation-global-item>
+             <cwc-navigation-global-item [isActive]="checkActiveIndex(3)" (click)="setActive(3)" [titleText]="'Title text'"
+                [icon]="'../assets/icons/baseline_search_' + getIconModifier(3) + '_18dp.png'"> 
+            </cwc-navigation-global-item>
+            <cwc-navigation-global-item [isActive]="checkActiveIndex(4)" (click)="setActive(4)"
+                [titleText]="'Title text'"
+                [icon]="'../assets/icons/baseline_person_' + getIconModifier(4) + '_18dp.png'"> 
+            </cwc-navigation-global-item>
+
+             <cwc-navigation-global-item [isActive]="checkActiveIndex(5)" (click)="setActive(5)"
+                [titleText]="'Title text'" [icon]="'../assets/icons/baseline_input_' + getIconModifier(5) + '_18dp.png'"> 
+            </cwc-navigation-global-item>
+             
+        </div>
+            
+        <div slot="secondary-actions">
+            <cwc-navigation-global-item 
+                [titleText]="'Open'" 
+                [ngClass]="{'opened': !isNavCollapsed}"
+                (click)="toggleNavCollapsed()"
+                [icon]="'../assets/icons/baseline_chevron_right_white_18dp.png'"> 
+            </cwc-navigation-global-item>
+        </div> 
+
+        <div slot="container-actions">
+     
+            <div slot="navigation-items">
+                <navigation-item text="Übersicht"  [ngClass]="{'is-active': checkActiveIndex(1)}">
+                </navigation-item>
+                <navigation-item text="Meine Buchungen" [ngClass]="{'is-active': checkActiveIndex(2)}">
+                </navigation-item>
+                <navigation-item text="Gespeicherte Suchen"[ngClass]="{'is-active': checkActiveIndex(3)}" >
+                </navigation-item>
+                <navigation-item text="Konto" dropIcon="./icon/sharp_flip_to_front_white_18dp.png" [ngClass]="{'is-active': checkActiveIndex(4)}">
+                </navigation-item>
+                <navigation-item text="Abmelden" dropIcon="./icon/sharp_flip_to_front_white_18dp.png" [ngClass]="{'is-active': checkActiveIndex(5)}">
+                </navigation-item>
+            </div>
+   
+        </div>
+       
+ </cwc-navigation>
+
+  <div class="container-fluid">
+    <header class="bg-primary position-fixed border-secondary">
     <div class="container">
       <div class="row pt-5 pb-5">
         <div class="logo col-md-4 text-left">
@@ -10,11 +65,11 @@
           </div>
         </div>
         <div class="col-md-4 text-center">
-            <h2><u>{{getTitleText()}}</u></h2>
+          <h2><u>{{getTitleText()}}</u></h2>
         </div>
         <div class="col-md-4 text-right">
-            <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
-              <i class="material-icons">{{getSearchButton()}}</i>
+          <button class="btn shadow-none bg-primary" type="button" name="button" (click)="isClassActive = !isClassActive;">
+            <i class="material-icons">{{getSearchButton()}}</i>
             </button>
         </div>
       </div>
@@ -35,7 +90,7 @@
                         <button class="btn btn-outline-secondary text-left"
                           type="button" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="true">
-                            Ort
+                          Ort
                         </button>
                         <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
                                 type="button" data-toggle="dropdown"
@@ -44,7 +99,7 @@
                         <div slot="dropdown-menu" class="dropdown-menu">
                             <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                             <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                        </div>
+                          </div>
                     </div>
                 </cwc-dropdown>
               </div>
@@ -53,11 +108,11 @@
               <div class="form-group">
                 <label class="sr-only" for="headerdropdown2">Umkreis</label>
                 <cwc-dropdown id="headerdropdown2">
-                    <div class="btn-group w-100">
+                  <div class="btn-group w-100">
                         <button class="btn btn-outline-secondary text-left"
                           type="button" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="true">
-                            Umkreis
+                          Umkreis
                         </button>
                         <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
                                 type="button" data-toggle="dropdown"
@@ -67,7 +122,7 @@
                             <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                             <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
                         </div>
-                    </div>
+                      </div>
                 </cwc-dropdown>
               </div>
             </div>
@@ -142,7 +197,7 @@
           </button>
           <div>
             <cwc-popper
-              refid="print"
+            refid="print"
               trigger="hover"
               arrow>
               <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
@@ -168,7 +223,7 @@
           </button>
           <div>
             <cwc-popper
-              refid="check"
+            refid="check"
               trigger="hover"
               arrow>
               <div slot="dropdown-menu" class="dropdown-menu text-center swatch-800">
@@ -177,22 +232,22 @@
             </cwc-popper>
           </div>
         </div>
-    </div>
-  </header>
+      </div>
+    </header>
   <div class="position-absolute" [ngClass]="{ 'translate-form': !isClassActive }">
     <div class="container mt-5">
-        <h1>[ Bearbeitungsmodus ]</h1>
+      <h1>[ Bearbeitungsmodus ]</h1>
     </div>
     <div class="container">
         <div class="bg-light mt-5 mb-3 pt-2 pb-2 pl-3">
-            <div class="row">
+          <div class="row">
                 <div class="col-md-4 mt-1">
                     <strong>Basisdaten</strong>
-                </div>
-                <div class="col-md-8">
+                  </div>
+                  <div class="col-md-8">
                     <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group mr-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-outline-secondary">1</button>
+                          <button type="button" class="btn btn-outline-secondary">1</button>
                         </div>
                         <div class="btn-group mr-2" role="group" aria-label="Second group">
                             <button type="button" class="btn btn-outline-secondary">2</button>
@@ -201,15 +256,15 @@
                             <button type="button" class="btn btn-outline-secondary">3</button>
                         </div>
                         <div class="btn-group mr-2" role="group" aria-label="Fourth group">
-                            <button type="button" class="btn btn-outline-secondary" disabled>4</button>
+                          <button type="button" class="btn btn-outline-secondary" disabled>4</button>
                         </div>
                         <div class="btn-group mr-3" role="group" aria-label="Fifth group">
                             <button type="button" class="btn btn-outline-secondary">5</button>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </div>
-        </div>
+          </div>
         <form>
             <div class="form-group">
                 <!-- <label class="control-label" for="input1">Bearbeitende Person(en)</label> -->
@@ -218,12 +273,12 @@
                 <br />
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
+              <div class="col-md-6">
+                <div class="form-group">
                         <label class="control-label" for="input2">Veranstaltungstitel</label>
                         <input class="form-control" id="input2" type="text" name="" value="">
+                      </div>
                     </div>
-                </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="input3">Veranstaltungsnummer</label>
@@ -234,15 +289,15 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label" for="input4">Veranstaltungstyp</label>
+                      <label class="control-label" for="input4">Veranstaltungstyp</label>
                         <input id="input4" class="form-control" type="text" name="" value="">
-                    </div>
+                      </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group">
+                  <div class="form-group">
                         <label class="control-label">Eigenschaften im Online-Portal</label>
                         <div class="row mt-2 mb-2">
-                            <div class="checkbox col-md-6">
+                          <div class="checkbox col-md-6">
                               <cwc-switch
                               id="checkbox1"
                               for="checkbox1"
@@ -251,7 +306,7 @@
                                 <!-- <label>
                                     <input class="form-check form-check-inline" type="checkbox" name="" value="">
                                     Sichtbar
-                                </label> -->
+                                  </label> -->
                             </div>
                             <div class="checkbox col-md-6">
                               <cwc-switch
@@ -259,17 +314,17 @@
                               for="checkbox2"
                               label-o-n="Buchbar"
                               ></cwc-switch>
-                                <!-- <label>
+                              <!-- <label>
                                     <input class="form-check form-check-inline" type="checkbox" name="" value="">
                                     Buchbar
                                 </label> -->
                             </div>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label" for="">Inhalt</label>
+              <label class="control-label" for="">Inhalt</label>
                 <textarea class="form-control" rows="4"></textarea>
             </div>
             <div class="form-group">
@@ -277,7 +332,7 @@
                 <textarea class="form-control" rows="4"></textarea>
             </div>
             <div class="mt-5">
-                <div class="mb-4">
+              <div class="mb-4">
                     <strong>Kataloggliederung</strong>
                 </div>
                 <div class="row mb-3">
@@ -295,7 +350,7 @@
                                     <div slot="dropdown-menu" class="dropdown-menu">
                                         <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                                         <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                    </div>
+                                      </div>
                                 </div>
                             </cwc-dropdown>
                         </div>
@@ -309,12 +364,12 @@
                                   <button slot="dropdown-trigger" class="btn btn-outline-secondary text-left dropdown-toggle"
                                     type="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="true">
-                                      Sprachlich-literarischer Bereich
+                                    Sprachlich-literarischer Bereich
                                   </button>
                                   <div slot="dropdown-menu" class="dropdown-menu">
                                       <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                                       <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
-                                  </div>
+                                    </div>
                               </div>
                           </cwc-dropdown>
                       </div>
@@ -330,19 +385,19 @@
                                   <button class="btn btn-outline-secondary text-left"
                                     type="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="true">
-                                      Bilingualer Unterricht
+                                    Bilingualer Unterricht
                                   </button>
                                   <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                          type="button" data-toggle="dropdown"
+                                  type="button" data-toggle="dropdown"
                                           aria-haspopup="true" aria-expanded="true">
                                   </button>
                                   <div slot="dropdown-menu" class="dropdown-menu">
-                                      <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                                    <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                                       <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
                                   </div>
                               </div>
                           </cwc-dropdown>
-                      </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
@@ -351,23 +406,23 @@
                           <cwc-dropdown id="dropdown4">
                               <div class="btn-group w-100">
                                   <button class="btn btn-outline-secondary text-left"
-                                    type="button" data-toggle="dropdown"
+                                  type="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="true">
-                                      Keiner
+                                    Keiner
                                   </button>
                                   <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                          type="button" data-toggle="dropdown"
+                                  type="button" data-toggle="dropdown"
                                           aria-haspopup="true" aria-expanded="true">
                                   </button>
                                   <div slot="dropdown-menu" class="dropdown-menu">
                                       <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                                       <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
                                   </div>
-                              </div>
+                                </div>
                           </cwc-dropdown>
                       </div>
                     </div>
-                </div>
+                  </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -375,21 +430,21 @@
                           <br>
                           <cwc-dropdown id="dropdown5">
                               <div class="btn-group w-100">
-                                  <button class="btn btn-outline-secondary text-left"
+                                <button class="btn btn-outline-secondary text-left"
                                     type="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="true">
                                       IF | Individuelle Fortbildung
-                                  </button>
+                                    </button>
                                   <button slot="dropdown-trigger" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
                                           type="button" data-toggle="dropdown"
                                           aria-haspopup="true" aria-expanded="true">
-                                  </button>
-                                  <div slot="dropdown-menu" class="dropdown-menu">
+                                        </button>
+                                        <div slot="dropdown-menu" class="dropdown-menu">
                                       <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                                       <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
                                   </div>
                               </div>
-                          </cwc-dropdown>
+                            </cwc-dropdown>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -417,8 +472,8 @@
         <br />
         <br />
 
-    </div>
-    <footer class="pt-5 pb-4 bg-light">
+      </div>
+      <footer class="pt-5 pb-4 bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -447,4 +502,6 @@
       </div>
     </footer>
   </div>
+</div>
+
 </div>
