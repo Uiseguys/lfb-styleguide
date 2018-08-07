@@ -293,6 +293,7 @@ cwc-dropdown .dropdown-item:hover::after {
 
 cwc-autocomplete-select .form-control {
   height: auto;
+  min-height: 38px;
 }
 
 cwc-popper .popper__arrow {
@@ -315,4 +316,58 @@ cwc-popper > .popper > .dropdown-menu {
 
 .translate-form {
   transform: translateY(99px);
+}
+
+cwc-switch .form-check.sc-cwc-switch {
+  padding-left: 0 !important;
+}
+
+// cwc-switch >>> .form-check {
+//   padding-left: 0 !important;
+// }
+
+cwc-switch .switch.sc-cwc-switch {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+cwc-switch .slider.sc-cwc-switch {
+  border-radius: 0 !important;
+  background-color: $white;
+  border-width: 1px;
+  border-color: $gray-700;
+  border-style: solid;
+}
+
+input.sc-cwc-switch:checked + .slider.sc-cwc-switch {
+  background-color: $gray-700;
+}
+
+.slider.round.sc-cwc-switch::before {
+  left: -2px;
+  bottom: 7px;
+  border-radius: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  transition: 0s;
+}
+
+input.sc-cwc-switch:checked + .slider.sc-cwc-switch::before {
+  font-family: "Material Icons";
+  content: "\e5ca";
+  transform: none;
+  color: $white;
+  font-size: 22px;
+}
+
+.labelON.sc-cwc-switch {
+  color: $gray-300;
+  top: -2px;
+  left: 20px;
+  font-family: "Gudea Regular", Helvetica, Arial;
+  padding-left: 15px;
+  opacity: 1;
+  transition: 0s;
+  font-size: 16px;
 }
