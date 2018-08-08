@@ -284,10 +284,17 @@ cwc-dropdown .dropdown-item:hover::after {
   // font-size: 20px;
 }
 
-.text-left.dropdown-toggle::after {
+// .text-left.dropdown-toggle::after {
+.dropdown-toggle::after {
+  font-family: "Material Icons";
+  content: "\e5cc";
   position: absolute;
-  top: 42%;
   right: 10px;
+  border: none !important;
+  transform: rotate(90deg);
+  width: auto;
+  height: auto;
+  // top: 42%;
 }
 
 .border-secondary {
