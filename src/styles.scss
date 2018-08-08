@@ -297,6 +297,10 @@ cwc-dropdown .dropdown-item:hover::after {
   // top: 42%;
 }
 
+cwc-dropdown  .btn-group.show .dropdown-toggle::after {
+  transform: rotate(270deg);
+}
+
 .border-secondary {
   border-color: $gray-200 !important;
 }
