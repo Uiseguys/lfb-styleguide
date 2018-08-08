@@ -24,18 +24,18 @@
             </a>
              
         </div>
-            
+
         <div slot="secondary-actions">
-            <cwc-navigation-global-item 
-                [titleText]="'Open'" 
+            <cwc-navigation-global-item
+                [titleText]="'Open'"
                 [ngClass]="{'opened': !isNavCollapsed}"
                 (click)="toggleNavCollapsed()"
-                [icon]="'../assets/icons/baseline_chevron_right_white_18dp.png'"> 
+                [icon]="'../assets/icons/baseline_chevron_right_white_18dp.png'">
             </cwc-navigation-global-item>
-        </div> 
+        </div>
 
         <div slot="container-actions">
-     
+
             <div slot="navigation-items">
 
                 <a class="container-link"  [ngClass]="{'is-active': checkActiveIndex(1) }" >
@@ -55,9 +55,9 @@
                 </a>
 
             </div>
-   
+
         </div>
-       
+
  </cwc-navigation>
 
   <div class="container-fluid">
@@ -169,7 +169,7 @@
             </cwc-popper>
           </div>
         </div>
-        <div class="" style="font-size: 1.5rem">
+        <div class="" style="font-size: 1.5rem;color: #343a40;">
           |
         </div>
         <div class="btn-group ml-2" role="group" aria-label="Second group">
@@ -225,7 +225,7 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="check" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+          <button id="check" type="button" class="btn btn-warning disabled rounded-circle p-1 mx-1">
             <i class="material-icons">done</i>
           </button>
           <div>

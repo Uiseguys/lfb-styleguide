@@ -54,7 +54,39 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .btn-primary:focus {
+  @extend .btn-primary:hover;
+}
+
+.btn-primary:active {
+  background-color: $red !important;
+  border-color: $red !important;
+}
+
+.btn:focus, a:focus, cwc-dropdown > .btn-group.show {
   box-shadow: 0 0 0 0.2rem lighten($cyan, 10%) !important;
+}
+
+.btn-warning {
+  color: $gray-800;
+}
+
+.btn-warning:focus {
+  @extend .btn-warning:hover;
+}
+
+.btn-warning:active {
+  background-color: $gray-800 !important;
+  color: $white !important;
+}
+
+.btn-warning.disabled, .btn-warning[disabled],
+.btn-warning.disabled:hover, .btn-warning[disabled]:hover,
+.btn-warning.disabled:active, .btn-warning[disabled]:active,
+.btn-warning.disabled:focus, .btn-warning[disabled]:focus, {
+  background-color: $yellow !important;
+  border-color: $yellow !important;
+  color: #d9ae00 !important;
+  box-shadow: none !important;
 }
 
 .btn-primary:hover {
@@ -136,7 +168,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .form-control:focus {
-  @extend .btn-primary:focus;
+  @extend .btn:focus;
 }
 
 .btn-outline-secondary {
@@ -264,7 +296,7 @@ cwc-dropdown > .btn-group:hover > .btn, cwc-dropdown > .btn-group.show > .btn {
 }
 
 cwc-dropdown > .btn-group:hover {
-  box-shadow: 0 0 0.5rem 0.1rem lighten($gray-300, 30%) !important;
+  box-shadow: 0 0 0.5rem 0.1rem lighten($gray-300, 30%);
 }
 
 .dropdown-toggle.dropdown-toggle-split {
@@ -276,15 +308,26 @@ cwc-dropdown .dropdown-item:hover {
 }
 
 cwc-dropdown .dropdown-item:hover::after {
-  content: "\2192";
+  font-family: "Material Icons";
+  content: "\e5c8";
   position: absolute;
   right: 10px;
+  font-weight: bolder;
 }
 
-.text-left.dropdown-toggle::after {
+.dropdown-toggle::after {
+  font-family: "Material Icons";
+  content: "\e5cc";
   position: absolute;
-  top: 42%;
   right: 10px;
+  border: none !important;
+  transform: rotate(90deg);
+  width: auto;
+  height: auto;
+}
+
+cwc-dropdown  .btn-group.show .dropdown-toggle::after {
+  transform: rotate(270deg);
 }
 
 .border-secondary {
@@ -321,10 +364,6 @@ cwc-popper > .popper > .dropdown-menu {
 cwc-switch .form-check.sc-cwc-switch {
   padding-left: 0 !important;
 }
-
-// cwc-switch >>> .form-check {
-//   padding-left: 0 !important;
-// }
 
 cwc-switch .switch.sc-cwc-switch {
   width: 20px !important;
@@ -371,3 +410,14 @@ input.sc-cwc-switch:checked + .slider.sc-cwc-switch::before {
   transition: 0s;
   font-size: 16px;
 }
+
+a {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  padding-top: 0.4rem;
+}
+
+// cwc-navigation {
+//   display: none !important;
+// }
