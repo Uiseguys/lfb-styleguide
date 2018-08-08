@@ -20,15 +20,11 @@ $eidotterHover: #ffcd00;
     }
 
     [slot="primary-actions"] {
-      .navigation-global-item-wrapper ,
       a.navigation-link {
-        // border-left: 4px solid $weis;
-
         display: block;
         height: 42px;
         line-height: 42px;
         width: 64px;
-        vertical-align: middle;
         text-align: center;
         border-left: 4px solid $grau-3;
 
@@ -36,7 +32,6 @@ $eidotterHover: #ffcd00;
           width: 32px;
           height: 32px;
         }
-
 
         &.is-active {
           border-radius: 0%;
@@ -61,14 +56,6 @@ $eidotterHover: #ffcd00;
     }
 
     [slot="secondary-actions"] {
-      navigation-item {
-        .text-wrapper {
-          font-family: "Garamond Regular", Helvetica, Arial;
-          font-size: 16px;
-          font-weight: 400;
-        }
-      }
-
       cwc-navigation-global-item.opened {
         img {
           transform: rotate(180deg);
@@ -84,11 +71,15 @@ $eidotterHover: #ffcd00;
     div.cwc-navigation-container-section-inner {
       background-color: #6d6d6d;
 
-      navigation-item {
+      a.container-link {
         background-color: #6d6d6d;
         border-radius: 0%;
         margin-right: 0;
         margin-left: 0;
+        height: 42px;
+        display: block;
+        padding-left: 8px;
+        padding-top: 16px;
 
         &.is-active {
           background-color: $weis;
