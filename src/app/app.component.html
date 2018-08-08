@@ -1,9 +1,9 @@
 <div class="app-wrapper">
     <cwc-navigation class="with-margin-top" [isCollapsed]="isNavCollapsed">
-            
-        <div slot="primary-actions"> 
-            
-            <cwc-navigation-global-item 
+
+        <div slot="primary-actions">
+
+            <cwc-navigation-global-item
                 [titleText]="'Home'" [isActive]="checkActiveIndex(1)" (click)="setActive(1)"
                 [icon]="'../assets/icons/baseline_home_' + getIconModifier(1) + '_18dp.png'">
             </cwc-navigation-global-item>
@@ -12,30 +12,30 @@
                 [icon]="'../assets/icons/baseline_date_range_' + getIconModifier(2) + '_18dp.png'">
             </cwc-navigation-global-item>
              <cwc-navigation-global-item [isActive]="checkActiveIndex(3)" (click)="setActive(3)" [titleText]="'Title text'"
-                [icon]="'../assets/icons/baseline_search_' + getIconModifier(3) + '_18dp.png'"> 
+                [icon]="'../assets/icons/baseline_search_' + getIconModifier(3) + '_18dp.png'">
             </cwc-navigation-global-item>
             <cwc-navigation-global-item [isActive]="checkActiveIndex(4)" (click)="setActive(4)"
                 [titleText]="'Title text'"
-                [icon]="'../assets/icons/baseline_person_' + getIconModifier(4) + '_18dp.png'"> 
+                [icon]="'../assets/icons/baseline_person_' + getIconModifier(4) + '_18dp.png'">
             </cwc-navigation-global-item>
 
              <cwc-navigation-global-item [isActive]="checkActiveIndex(5)" (click)="setActive(5)"
-                [titleText]="'Title text'" [icon]="'../assets/icons/baseline_input_' + getIconModifier(5) + '_18dp.png'"> 
+                [titleText]="'Title text'" [icon]="'../assets/icons/baseline_input_' + getIconModifier(5) + '_18dp.png'">
             </cwc-navigation-global-item>
-             
+
         </div>
-            
+
         <div slot="secondary-actions">
-            <cwc-navigation-global-item 
-                [titleText]="'Open'" 
+            <cwc-navigation-global-item
+                [titleText]="'Open'"
                 [ngClass]="{'opened': !isNavCollapsed}"
                 (click)="toggleNavCollapsed()"
-                [icon]="'../assets/icons/baseline_chevron_right_white_18dp.png'"> 
+                [icon]="'../assets/icons/baseline_chevron_right_white_18dp.png'">
             </cwc-navigation-global-item>
-        </div> 
+        </div>
 
         <div slot="container-actions">
-     
+
             <div slot="navigation-items">
                 <navigation-item text="Übersicht"  [ngClass]="{'is-active': checkActiveIndex(1)}">
                 </navigation-item>
@@ -48,9 +48,9 @@
                 <navigation-item text="Abmelden" dropIcon="./icon/sharp_flip_to_front_white_18dp.png" [ngClass]="{'is-active': checkActiveIndex(5)}">
                 </navigation-item>
             </div>
-   
+
         </div>
-       
+
  </cwc-navigation>
 
   <div class="container-fluid">
@@ -162,7 +162,7 @@
             </cwc-popper>
           </div>
         </div>
-        <div class="" style="font-size: 1.5rem">
+        <div class="" style="font-size: 1.5rem;color: #343a40;">
           |
         </div>
         <div class="btn-group ml-2" role="group" aria-label="Second group">
@@ -218,7 +218,7 @@
               </div>
             </cwc-popper>
           </div>
-          <button id="check" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
+          <button id="check" type="button" class="btn btn-warning disabled rounded-circle p-1 mx-1">
             <i class="material-icons">done</i>
           </button>
           <div>
