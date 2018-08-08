@@ -20,10 +20,18 @@ $eidotterHover: #ffcd00;
     }
 
     [slot="primary-actions"] {
-      .navigation-global-item-wrapper {
-        // border-left: 4px solid $weis;
+      a.navigation-link {
+        display: block;
+        height: 42px;
+        line-height: 28px;
         width: 64px;
+        text-align: center;
         border-left: 4px solid $grau-3;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
 
         &.is-active {
           border-radius: 0%;
@@ -32,11 +40,17 @@ $eidotterHover: #ffcd00;
           margin-right: 0;
           margin-left: 0;
           border-left: 4px solid $eidotter;
+
+          &:hover {
+            background-color: $weis;
+          }
         }
 
         &:hover {
+          cursor: pointer;
           border-radius: 0;
           border-left: 4px solid $schwarz;
+          background-color: $grau-4;
         }
       }
     }
@@ -65,11 +79,16 @@ $eidotterHover: #ffcd00;
     div.cwc-navigation-container-section-inner {
       background-color: #6d6d6d;
 
-      navigation-item {
+      a.container-link {
         background-color: #6d6d6d;
         border-radius: 0%;
         margin-right: 0;
         margin-left: 0;
+        height: 42px;
+        display: block;
+        text-align: left;
+        padding-left: 8px;
+        padding-top: 16px;
 
         &.is-active {
           background-color: $weis;
