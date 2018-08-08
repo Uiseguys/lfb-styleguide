@@ -2,11 +2,15 @@
     <cwc-navigation class="with-margin-top" [isCollapsed]="isNavCollapsed">
             
         <div slot="primary-actions"> 
+
+            <a class="navigation-link" [ngClass]="{'is-active': checkActiveIndex(1) }" (click)="setActive(1)" >
+              <img [src]="'../assets/icons/baseline_home_' + getIconModifier(1) + '_18dp.png'" alt="">
+            </a>
             
-            <cwc-navigation-global-item 
+            <!-- <cwc-navigation-global-item 
                 [titleText]="'Home'" [isActive]="checkActiveIndex(1)" (click)="setActive(1)"
-                [icon]="'../assets/icons/baseline_home_' + getIconModifier(1) + '_18dp.png'">
-            </cwc-navigation-global-item>
+                [icon]="'../assets/icons/baseline_home_' + getIconModifier(1) + '_18dp.png'"> -->
+            <!-- </cwc-navigation-global-item> -->
             <cwc-navigation-global-item [isActive]="checkActiveIndex(2)" (click)="setActive(2)"
                 [titleText]="'Title text'"
                 [icon]="'../assets/icons/baseline_date_range_' + getIconModifier(2) + '_18dp.png'">

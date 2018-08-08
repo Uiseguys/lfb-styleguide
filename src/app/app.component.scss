@@ -20,10 +20,23 @@ $eidotterHover: #ffcd00;
     }
 
     [slot="primary-actions"] {
-      .navigation-global-item-wrapper {
+      .navigation-global-item-wrapper ,
+      a.navigation-link {
         // border-left: 4px solid $weis;
+
+        display: block;
+        height: 42px;
+        line-height: 42px;
         width: 64px;
+        vertical-align: middle;
+        text-align: center;
         border-left: 4px solid $grau-3;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
 
         &.is-active {
           border-radius: 0%;
@@ -32,11 +45,17 @@ $eidotterHover: #ffcd00;
           margin-right: 0;
           margin-left: 0;
           border-left: 4px solid $eidotter;
+
+          &:hover {
+            background-color: $weis;
+          }
         }
 
         &:hover {
+          cursor: pointer;
           border-radius: 0;
           border-left: 4px solid $schwarz;
+          background-color: $grau-4;
         }
       }
     }
