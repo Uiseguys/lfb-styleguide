@@ -210,6 +210,26 @@ export class AppComponent {
         'Vega, Suki L.'
         ];
         isClassActive = true;
+
+        isNavCollapsed = false;
+        activeNavItemIndex = 1;
+
+        setActive(i: number): void {
+          this.activeNavItemIndex = i;
+        }
+
+        getIconModifier(i: number): string {
+          return this.activeNavItemIndex === i ? 'black' : 'white';
+        }
+
+        checkActiveIndex(i: number): boolean {
+          return this.activeNavItemIndex === i;
+        }
+
+        toggleNavCollapsed(): void {
+          this.isNavCollapsed = !this.isNavCollapsed;
+        }
+
         getSearchButton() {
           if (this.isClassActive) {
             return 'search';
