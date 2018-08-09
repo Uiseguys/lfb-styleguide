@@ -418,6 +418,78 @@ a {
   padding-top: 0.4rem;
 }
 
-// cwc-navigation {
-//   display: none !important;
-// }
+.wk-commands {
+  border-color: $gray-300;
+}
+
+.wk-switchboard {
+  display: none;
+}
+
+.wk-commands .btn:before {
+  font-family: "Material Icons";
+  color: $gray-300;
+  font-size: 20px;
+  position: relative;
+  right: 8px;
+  bottom: 6px;
+}
+
+.wk-commands .btn.bold:before {
+  content: '\e238';
+}
+
+.wk-commands .btn.italic:before {
+  content: '\e23f';
+}
+
+.wk-commands .btn.quote-left:before {
+  content: '\e249';
+}
+
+.wk-commands .btn.code:before {
+  content: '\e23c \e5c5';
+}
+
+.wk-commands .btn.code {
+  width: 45px;
+}
+
+.wk-commands .btn.list-ol:before {
+  content: '\e236 \e5c5';
+}
+
+.wk-commands .btn.list-ol {
+  width: 45px;
+}
+
+.wk-commands .btn.list-ul:before {
+  content: '\e242';
+}
+
+.wk-commands .btn.link:before {
+  content: '\e241';
+}
+
+.wk-commands .btn.image:before {
+  content: '\e239';
+}
+
+.wk-commands .wk-command {
+  display: none;
+}
+
+cwc-wysiwyg-editor .wk-wysiwyg {
+  min-height: 135px;
+  resize: vertical;
+  overflow: auto;
+}
+
+cwc-wysiwyg-editor .wk-container {
+  border-radius: 0;
+  border-color: $gray-300;
+}
+
+cwc-navigation {
+  display: none !important;
+}
