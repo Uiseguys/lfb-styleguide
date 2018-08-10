@@ -1,0 +1,168 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="control-label" for="input4">Veranstaltungstyp</label>
+            <input id="input4" class="form-control" type="text" name="" value="">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="control-label">Eigenschaften im Online-Portal</label>
+            <div class="row mt-2 mb-2">
+                <div class="checkbox col-md-6">
+                    <cwc-switch
+                            id="checkbox1"
+                            for="checkbox1"
+                            label-o-n="Sichtbar"
+                    ></cwc-switch>
+                    <!-- <label>
+                        <input class="form-check form-check-inline" type="checkbox" name="" value="">
+                        Sichtbar
+                      </label> -->
+                </div>
+                <div class="checkbox col-md-6">
+                    <cwc-switch
+                            id="checkbox2"
+                            for="checkbox2"
+                            label-o-n="Buchbar"
+                    ></cwc-switch>
+                    <!-- <label>
+                          <input class="form-check form-check-inline" type="checkbox" name="" value="">
+                          Buchbar
+                      </label> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label" >Inhalt</label>
+    <textarea class="form-control" rows="4"></textarea>
+</div>
+<div class="form-group">
+    <label class="control-label" >Ziel der Veranstaltung</label>
+    <textarea class="form-control" rows="4"></textarea>
+</div>
+<div class="mt-5">
+    <div class="mb-4">
+        <strong>Kataloggliederung</strong>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" >Hauptbereich</label>
+                <br>
+                <cwc-dropdown id="dropdown1">
+                    <div class="btn-group w-100">
+                        <button slot="dropdown-trigger" class="btn btn-outline-secondary text-left dropdown-toggle"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            QB | Qualitatsbereich Unterricht
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" >Bereich</label>
+                <br>
+                <cwc-dropdown id="dropdown2">
+                    <div class="btn-group w-100">
+                        <button slot="dropdown-trigger" class="btn btn-outline-secondary text-left dropdown-toggle"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            Sprachlich-literarischer Bereich
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" >Teilbereich</label>
+                <br>
+                <cwc-dropdown id="dropdown3">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-secondary text-left"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            Bilingualer Unterricht
+                        </button>
+                        <button slot="dropdown-trigger"
+                                class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" >Unterbereich</label>
+                <br>
+                <cwc-dropdown id="dropdown4">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-secondary text-left"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            Keiner
+                        </button>
+                        <button slot="dropdown-trigger"
+                                class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Themenschwerpunkt</label>
+                <br>
+                <cwc-dropdown id="dropdown5">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-secondary text-left"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            IF | Individuelle Fortbildung
+                        </button>
+                        <button slot="dropdown-trigger"
+                                class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                        </button>
+                        <div slot="dropdown-menu" class="dropdown-menu">
+                            <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
+                            <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
+                        </div>
+                    </div>
+                </cwc-dropdown>
+            </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</div>

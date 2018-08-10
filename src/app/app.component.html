@@ -245,7 +245,14 @@
     <div class="container mt-5">
       <h1>[ Bearbeitungsmodus ]</h1>
     </div>
+
+
+
+
     <div class="container">
+        <a href="#p" (click)="showChild=true;">-> Show Child view with broken dropdowns <- </a>
+
+        <app-styleguide *ngIf="showChild"></app-styleguide>
         <div class="bg-light mt-5 mb-3 pt-2 pb-2 pl-3">
           <div class="row">
                 <div class="col-md-4 mt-1">
