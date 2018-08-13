@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
 export class AppComponent {
     title = 'app';
     multiSelectData: any = ['Herr Müller', 'Frau Förster'];
+    showChild: boolean = false;
     names: any = [
         'Baker, Nero X.'
         ,
