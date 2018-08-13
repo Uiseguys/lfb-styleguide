@@ -62,7 +62,7 @@
 
   <div class="container-fluid">
     <header class="bg-primary position-fixed border-secondary">
-    <!-- <div class="container">
+    <div class="container">
       <div class="row pt-5 pb-5">
         <div class="logo col-md-4 text-left">
           <img class="ml-2 mr-3 float-left" src="../assets/images/Grosses_Landeswappen_Baden_Wuerttemberg.svg" alt="logo" />
@@ -139,8 +139,8 @@
           </div>
         </form>
       </div>
-    </div> -->
-    <!-- <div class="btn-toolbar bg-warning justify-content-center border-secondary border-top border-bottom pt-2 pb-2" role="toolbar" aria-label="Toolbar with button groups">
+    </div>
+    <div class="btn-toolbar bg-warning justify-content-center border-secondary border-top border-bottom pt-2 pb-2" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
           <button id="minus" type="button" class="btn btn-warning rounded-circle p-1 mx-1">
             <i class="material-icons">remove</i>
@@ -239,7 +239,7 @@
             </cwc-popper>
           </div>
         </div>
-      </div> -->
+      </div>
     </header>
   <div class="position-absolute" [ngClass]="{ 'translate-form': !isClassActive }">
     <div class="container mt-5">
@@ -252,9 +252,9 @@
     <div class="container">
         <a href="#p" (click)="showChild=true;">-> Show Child view with broken dropdowns <- </a>
 
-      <h4>nested template start</h4>
+      <h4>nested template start ->>>>>>></h4>
       <app-styleguide *ngIf="showChild"></app-styleguide>
-      <h4>nested template end</h4>
+      <h4><<<<<<<-nested template end</h4>
 
 
 
@@ -375,7 +375,7 @@
                             </cwc-dropdown>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                       <div class="form-group">
                           <label class="control-label" for="dropdown2">Bereich</label>
                           <br>
@@ -393,7 +393,7 @@
                               </div>
                           </cwc-dropdown>
                       </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
