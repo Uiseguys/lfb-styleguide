@@ -57,9 +57,9 @@
                         <button slot="dropdown-trigger" class="btn btn-outline-secondary text-left dropdown-toggle"
                                 type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="true">
-                            QB | Qualitatsbereich Unterricht
+                            QB | Qualitatsbereich Unterricht Dropdown Items test dropdown
                         </button>
-                        <div slot="dropdown-menu" class="dropdown-menu">
+                        <div slot="dropdown-items" class="dropdown-menu">
                             <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                             <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
                         </div>
@@ -76,9 +76,9 @@
                         <button slot="dropdown-trigger" class="btn btn-outline-secondary text-left dropdown-toggle"
                                 type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="true">
-                            Sprachlich-literarischer Bereich
+                            Sprachlich-literarischer Bereich with popper class
                         </button>
-                        <div slot="dropdown-menu" class="dropdown-menu">
+                        <div slot="dropdown-menu" class="dropdown-menu popper">
                             <div class="dropdown-item" data-value="Automatic">dropdown button 1</div>
                             <div class="dropdown-item" data-value="Manual">dropdown button 2</div>
                         </div>
@@ -163,6 +163,9 @@
             </div>
         </div>
         <div class="col-md-6">
+
+                <cwc-autocomplete-select label="Bearbeitende Person(en)" placeholder="Search something e.g. 'Argentina'"
+                                         class="border-form-control" [data]="names"></cwc-autocomplete-select>
         </div>
     </div>
 </div>
