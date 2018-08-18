@@ -43,8 +43,40 @@
     <label class="control-label" >Ziel der Veranstaltung</label>
     <textarea class="form-control" rows="4"></textarea>
 </div>
-<cwc-autocomplete-select label="Bearbeitende Person(en)" placeholder="Search something e.g. 'Argentina'"
-                         class="border-form-control" [data]="['Hans','Otto']"></cwc-autocomplete-select>
+
+<cwc-autocomplete-select
+  class="border-form-control"
+  [data]="['Hans','Otto']"
+  label="Bearbeitende Person(en)"
+  placeholder="Search something e.g. 'Argentina'">
+</cwc-autocomplete-select>
+
+<cwc-autocomplete-select
+  label="Autocomplete with Template"
+  [data]="complex"
+  [itemAs]="'option'"
+  [searchKey]="searchString"
+  [template]="getTemplate()"
+  placeholder="Search something e.g. 'Alabama'">
+</cwc-autocomplete-select>
+
+<div class="row mb-3">
+  <div class="col-md-6">
+      <cwc-autocomplete-select
+      [label]="autocompleteNoDataLabel"
+      [data]="complexClone"
+      [itemAs]="'option'"
+      [searchKey]="searchString"
+      [template]="getTemplate()"
+      placeholder="Search something e.g. 'Alabama'">
+    </cwc-autocomplete-select>
+  </div>
+  <div class="col-md-6">
+    <label class="control-label">Add data to the Autocomplete component</label>
+    <div><button class="btn btn-secondary" (click)="addData()">Add Data</button></div>
+  </div>
+</div>
+
 <div class="mt-5">
     <div class="mb-4">
         <strong>Kataloggliederung</strong>
