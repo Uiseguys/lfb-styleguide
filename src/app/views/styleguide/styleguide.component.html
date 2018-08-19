@@ -77,6 +77,38 @@
   </div>
 </div>
 
+<div class="row mb-3">
+	<div class="col-sm-12">
+		<cwc-autocomplete-select
+				label="Initially given value"
+				[data]="complex"
+				[itemAs]="'option'"
+				[value]="valuesToAdd"
+				[searchKey]="searchString"
+				[template]="getTemplate()"
+				placeholder="Search something e.g. 'Alabama'">
+		</cwc-autocomplete-select>
+	</div>
+</div>
+initialValue: {{ initialValue | json }}
+<div class="row mb-3">
+	<div class="col-md-6">
+		<cwc-autocomplete-select
+				label="Value given after initialization"
+				[data]="complex"
+				[itemAs]="'option'"
+				[value]="initialValue"
+				[searchKey]="searchString"
+				[template]="getTemplate()"
+				placeholder="Search something e.g. 'Alabama'">
+		</cwc-autocomplete-select>
+	</div>
+	<div class="col-md-6">
+		<label class="control-label">Add Value to the Autocomplete component</label>
+		<div><button class="btn btn-secondary" (click)="addValues()">Add Value</button></div>
+	</div>
+</div>
+
 <div class="mt-5">
     <div class="mb-4">
         <strong>Kataloggliederung</strong>

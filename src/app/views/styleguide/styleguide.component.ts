@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-styleguide',
@@ -6,42 +6,64 @@ import {Component} from '@angular/core';
     styleUrls: ['./styleguide.component.scss']
 })
 export class StyleguideComponent {
-  autocompleteNoDataLabel = 'Autocomplete with Template - initially no data (NO DATA)';
-  complexClone = [];
-  complex = [
-    {
-      type: 'country',
-      data: {
-        name: 'Austria',
-        capital: 'Vienna'
-      }
-    },
-    {
-      type: 'country',
-      data: {
-        name: 'Australia',
-        capital: 'Canberra'
-      }
-    },
-    {
-      type: 'country',
-      data: {
-        name: 'Argentina',
-        capital: 'Buenos Aires'
-      }
-    }
-  ];
+    autocompleteNoDataLabel = 'Autocomplete with Template - initially no data (NO DATA)';
+    complexClone = [];
+    complex = [
+        {
+            type: 'country',
+            data: {
+                name: 'Austria',
+                capital: 'Vienna'
+            }
+        },
+        {
+            type: 'country',
+            data: {
+                name: 'Australia',
+                capital: 'Canberra'
+            }
+        },
+        {
+            type: 'country',
+            data: {
+                name: 'Argentina',
+                capital: 'Buenos Aires'
+            }
+        }
+    ];
 
-  searchString = 'data.name';
+    initialValue = null;
+    valuesToAdd = [
+        {
+            type: 'country',
+            data: {
+                name: 'Austria',
+                capital: 'Vienna'
+            }
+        },
+        {
+            type: 'country',
+            data: {
+                name: 'Australia',
+                capital: 'Canberra'
+            }
+        }
+    ];
 
-  getTemplate() {
-    return `
+    searchString = 'data.name';
+
+    getTemplate() {
+        return `
       <span><%=option.data.name%> <%=option.data.capital%></span>
     `
-  }
+    }
 
-  addData() {
-    this.complexClone = this.complex;
-    this.autocompleteNoDataLabel = 'Autocomplete with Template - initially no data (ADDED DATA)';
-  }
+    addValues() {
+        this.initialValue = this.valuesToAdd;
+    }
+
+    addData() {
+        this.complexClone = this.complex;
+        this.autocompleteNoDataLabel = 'Autocomplete with Template - initially no data (ADDED DATA)';
+    }
 }
