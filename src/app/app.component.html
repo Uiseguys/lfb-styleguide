@@ -254,6 +254,8 @@
 
         <app-styleguide *ngIf="showChild"></app-styleguide>
         <div class="bg-light mt-5 mb-3 pt-2 pb-2 pl-3">
+
+
           <div class="row">
                 <div class="col-md-4 mt-1">
                     <strong>Basisdaten</strong>
@@ -285,6 +287,23 @@
                 <cwc-autocomplete-select label="Bearbeitende Person(en)" placeholder="Search something e.g. 'Argentina'"
                                          class="border-form-control" [data]="names"></cwc-autocomplete-select>
                 <br />
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <cwc-autocomplete-select
+                            label="Value given after initialization"
+                            [data]="complex"
+                            [itemAs]="'option'"
+                            [value]="valuesToAdd"
+                            [searchKey]="searchString"
+                            [template]="getTemplate()"
+                            placeholder="Search something e.g. 'Alabama'">
+                    </cwc-autocomplete-select>
+                </div>
+                <div class="col-md-6">
+                    <label class="control-label">Add Value to the Autocomplete component</label>
+                    <div><button class="btn btn-secondary" (click)="addMoreValues()">Add Mores Values</button></div>
+                </div>
             </div>
             <div class="row">
               <div class="col-md-6">

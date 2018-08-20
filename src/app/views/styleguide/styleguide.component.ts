@@ -62,6 +62,10 @@ export class StyleguideComponent {
         this.initialValue = this.valuesToAdd;
     }
 
+    addMoreValues() {
+        this.valuesToAdd = this.complex;
+    }
+
     addData() {
         this.complexClone = this.complex;
         this.autocompleteNoDataLabel = 'Autocomplete with Template - initially no data (ADDED DATA)';
