@@ -53,9 +53,7 @@ export class StyleguideComponent {
     searchString = 'data.name';
 
     getTemplate() {
-        return `
-      <span><%=option.data.name%> <%=option.data.capital%></span>
-    `
+        return '${option.data.name} ${option.data.capital}';
     }
 
     addValues() {
