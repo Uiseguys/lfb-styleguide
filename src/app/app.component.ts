@@ -211,7 +211,7 @@ export class AppComponent {
         ];
         isClassActive = true;
 
-        isNavCollapsed = false;
+        isNavCollapsed = true;
         activeNavItemIndex = 1;
 
         setActive(i: number): void {
