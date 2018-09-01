@@ -6,6 +6,7 @@ import {Component} from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    showChild = false;
     title = 'app';
     multiSelectData: any = ['Herr Müller', 'Frau Förster'];
     names: any = [
@@ -208,40 +209,47 @@ export class AppComponent {
         'Stafford, Shoshana N.'
         ,
         'Vega, Suki L.'
-        ];
-        isClassActive = true;
+    ];
+    isClassActive = true;
 
-        isNavCollapsed = true;
-        activeNavItemIndex = 1;
+    isNavCollapsed = true;
+    activeNavItemIndex = 1;
 
-        setActive(i: number): void {
-          this.activeNavItemIndex = i;
-        }
+    setActive(i: number): void {
+        this.activeNavItemIndex = i;
+    }
 
-        getIconModifier(i: number): string {
-          return this.activeNavItemIndex === i ? 'black' : 'white';
-        }
+    getIconModifier(i: number): string {
+        return this.activeNavItemIndex === i ? 'black' : 'white';
+    }
 
-        checkActiveIndex(i: number): boolean {
-          return this.activeNavItemIndex === i;
-        }
+    checkActiveIndex(i: number): boolean {
+        return this.activeNavItemIndex === i;
+    }
 
-        toggleNavCollapsed(): void {
-          this.isNavCollapsed = !this.isNavCollapsed;
-        }
+    toggleNavCollapsed(): void {
+        this.isNavCollapsed = !this.isNavCollapsed;
+    }
 
-        getSearchButton() {
-          if (this.isClassActive) {
+    getSearchButton() {
+        if (this.isClassActive) {
             return 'search';
-          }
-          return 'close';
         }
-        getTitleText() {
-          if (this.isClassActive) {
+        return 'close';
+    }
+
+
+    addMoreValues() {
+        this.valuesToAdd = this.complex;
+    }
+
+
+    getTitleText() {
+        if (this.isClassActive) {
             return 'Meine Buchungen';
-          }
-          return 'Suche';
         }
+        return 'Suche';
+    }
 
     autocompleteNoDataLabel = 'Autocomplete with Template - initially no data (NO DATA)';
     complexClone = [];
@@ -290,8 +298,6 @@ export class AppComponent {
     searchString = 'data.name';
 
     getTemplate() {
-        return `
-      <span><%=option.data.name%> <%=option.data.capital%></span>
-    `
+        return '${option.data.name} ${option.data.capital}';
     }
 }
