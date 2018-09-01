@@ -1,3 +1,7 @@
 node_modules
 .idea/misc.xml
 .idea/styleguide.iml
+.idea/lfb-test.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
