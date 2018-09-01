@@ -32,7 +32,7 @@ export class StyleguideComponent {
         }
     ];
 
-    initialValue = [];
+    initialValue = null;
     valuesToAdd = [
         {
             type: 'country',
